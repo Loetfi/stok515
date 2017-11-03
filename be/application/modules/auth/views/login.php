@@ -38,7 +38,7 @@
             </div>
             <div class="row">
               <div class="col-xs-12">
-                <a href="ForgotPassword.html" class="font-11">Lupa Kata Sandi?</a>
+                <a href="<?php echo site_url('auth/forgot') ?>" class="font-11">Lupa Kata Sandi?</a>
               </div>
             </div>
             <br>

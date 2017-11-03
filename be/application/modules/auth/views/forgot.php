@@ -16,8 +16,8 @@
             </button> 
           </div>
           <div class="collapse navbar-collapse"> 
-            <a href="dashboard.html" class="logoimage">
-              <img src="assets/img/icon/logo-blue.svg" class="user-image" alt="User Image" style="width: 150px;">
+            <a href="<?php echo site_url('auth/login') ?>" class="logoimage">
+              <img src="<?php echo base_url('assets/img/icon/logo-blue.svg');?>" class="user-image" alt="User Image" style="width: 150px;">
             </a> 
             <ul class="nav navbar-nav navbar-right">
 
