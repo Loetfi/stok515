@@ -47,14 +47,16 @@
                     </a>
                   </li>
                   <li class="">
-                    <a href="pengaturanpos.html">
+                    <!-- pengaturanpos.html -->
+                    <a href="<?php echo site_url('setting/pos'); ?>">
                       <img src="<?php echo base_url('assets/img/icon/icon-settingPOS_nonaktif.svg');?>" class="" alt="icon">
                       <p>Pengaturan POS
                       </p>
                     </a>
                   </li>
                   <li class="">
-                    <a href="editprofil.html">
+                    <!-- editprofil.html -->
+                    <a href="<?php echo site_url('auth/profil/edit'); ?>">
                       <img src="<?php echo base_url('assets/img/icon/icon-editakun_nonaktif.svg');?>" class="" alt="icon">
                       <p>Edit Profile Akun
                       </p>
@@ -64,7 +66,7 @@
               </div>
             </li> 
             <li>
-              <a href="MyPOS.html">
+              <a href="<?php echo site_url('pos');?>">
                 <img src="<?php echo base_url('assets/img/icon/icon-pos_nonaktif.svg');?>" class="" alt="icon">
                 <p>My POS
                 </p>

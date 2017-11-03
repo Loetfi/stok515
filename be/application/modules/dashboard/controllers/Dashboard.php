@@ -7,7 +7,7 @@ class Dashboard extends CI_Controller {
 	{
 		$template = 'dashboard/dashboard';
 		$data['title'] = 'Dashboard';
-		template_auth($template, $data);		
+		template($template, $data);		
 	}
 
 }

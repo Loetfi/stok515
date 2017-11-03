@@ -1,130 +1,3 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/png" href="assets/img/favicon.png">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <title>Profil Akun | STOKSIS
-    </title>
-    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
-    <meta name="viewport" content="width=device-width" />
-    <!-- Bootstrap core CSS     -->
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
-    <!-- Animation library for notifications   -->
-    <link href="assets/css/animate.min.css" rel="stylesheet"/>
-    
-    <link href="assets/css/bootstrap-reset.css" rel="stylesheet"/>
-    <link href="assets/css/my-style.css" rel="stylesheet"/>
-    <link href="assets/css/helper.css" rel="stylesheet"/>
- 
-    <!--     Fonts and icons     -->
-    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
-    <link href="assets/css/pe-icon-7-stroke.css" rel="stylesheet" />
-  </head>
-    <body>
-      <div class="wrapper">
-        <div class="sidebar" data-color="white">
-          <div class="logo">
-            <a href="dashboard.html" class="logo-text">
-             <img src="assets/img/icon/logo-blue.svg" class="user-image" alt="User Image">
-            </a>
-          </div> 
-          <div class="sidebar-wrapper"> 
-            <ul class="nav">
-              <li class="">
-                <a href="dashboard.html">
-                  <img src="assets/img/icon/icon-dashboard_nonaktif.svg" class="" alt="icon">
-                  <p>Dashboard
-                  </p>
-                </a>
-              </li>
-              <li class="active">
-                <a data-toggle="collapse" href="#componentsExamples" aria-expanded="false">
-                  <img src="assets/img/icon/icon-pengaturan_nonaktif.svg" class="" alt="icon">
-                  <p>Pengaturan
-                    <b class="pe-7s-angle-down icon-down">
-                    </b>
-                  </p>
-                </a>
-                <div class="collapse in" id="componentsExamples">
-                  <ul class="nav">
-                    <li class="">
-                      <a href="aturtoko.html">
-                        <img src="assets/img/icon/icon-toko-nonaktif.svg" class="" alt="icon">
-                        <p>Atur Toko
-                        </p>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="aturtim.html">
-                        <img src="assets/img/icon/icon-tim_nonaktif.svg" class="" alt="icon">
-                        <p>Atur Tim
-                        </p>
-                      </a>
-                    </li>
-                    <li class="">
-                      <a href="aturproduk.html">
-                        <img src="assets/img/icon/icon-produk_nonaktif.svg" class="" alt="icon">
-                        <p>Atur Produk
-                        </p>
-                      </a>
-                    </li>
-                    <li class="">
-                      <a href="pengaturanpos.html">
-                        <img src="assets/img/icon/icon-settingPOS_nonaktif.svg" class="" alt="icon">
-                        <p>Pengaturan POS
-                        </p>
-                      </a>
-                    </li>
-                    <li class="active">
-                      <a href="editprofil.html">
-                         <img src="assets/img/icon/icon-editakun_aktif.svg" class="" alt="icon">
-                        <p class="color-black">Edit Profile Akun
-                        </p>
-                      </a>
-                    </li> 
-                  </ul>
-                </div>
-              </li> 
-              <li>
-                <a href="MyPOS.html">
-                  <img src="assets/img/icon/icon-pos_nonaktif.svg" class="" alt="icon">
-                  <p>My POS
-                  </p>
-                </a>
-              </li>
-              <li class="">
-                <a href="DaftarTransaksi.html">
-                  <img src="assets/img/icon/icon-historitransaksi_nonaktif.svg" class="" alt="icon">
-                  <p>Daftar Transaksi
-                  </p>
-                </a>
-              </li>
-              <li class="">
-                <a href="Pemberitahuan.html">
-                  <img src="assets/img/icon/icon-notifikasi_nonaktif.svg" class="" alt="icon">
-                  <p>Pemberitahuan
-                  <span>
-                    <small class="label pull-right bg-red">12</small>  
-                  </span>
-                  </p>
-                </a>
-              </li>
-              <li class="active-pro">
-                <a href="bantuan.html">
-                  <img src="assets/img/icon/icon-help.svg" class="" alt="icon">
-                  <p>Bantuan</p>
-                </a>
-              </li>
-              <li class="bottom">
-                <a href="#"> 
-                   2017 All Rights Reserved Stoksis.com
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
         <div class="main-panel">
           <nav class="navbar navbar-default navbar-fixed">
             <div class="container-fluid">
@@ -142,12 +15,12 @@
               </div>
               <div class="collapse navbar-collapse">
               <a href="dashboard.html" class="logoimage">
-                  <img src="assets/img/icon/logo-blue.svg" class="user-image" alt="User Image" style="width: 150px;">
+                  <img src="<?php echo base_url('assets/img/icon/logo-blue.svg');?>" class="user-image" alt="User Image" style="width: 150px;">
                 </a> 
                 <ul class="nav navbar-nav navbar-right">
                   <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                      <img src="assets/img/icon/icon-profil.svg" class="user-image" alt="User Image"> Nama Akun
+                      <img src="<?php echo base_url('assets/img/icon/icon-profil.svg');?>" class="user-image" alt="User Image"> Nama Akun
                       <b class="pe-7s-angle-down icon-down">
                       </b>
                     </a>
@@ -169,7 +42,7 @@
                       </li>
                       <li>
                         <a href="#">
-                          <img src="assets/img/icon/icon-logout.svg" class="icon-logout" alt="icon"> Keluar
+                          <img src="<?php echo base_url('assets/img/icon/icon-logout.svg');?>" class="icon-logout" alt="icon"> Keluar
                         </a>
                       </li>
                     </ul>
@@ -213,7 +86,7 @@
                         <div class="col-md-4 col-md-offset-4">
                           <div class="text-center bg-form">
                             <div class="img-section">
-                             <img class="avatar-toko border-gray" src="assets/img/icon/icon-profil.svg" alt="...">
+                             <img class="avatar-toko border-gray" src="<?php echo base_url('assets/img/icon/icon-profil.svg');?>" alt="...">
                              <!--  <span class="fake-icon-edit" id="PicUpload" style="color: #000;">
                                 <span class="pe-7s-plus plus" style="font-size: 80px;top: 20px;left: 25px;position: absolute;">
                                 </span>
@@ -278,44 +151,8 @@
         </div>
       </div> 
     </body>
-  <!--   Core JS Files and PerfectScrollbar library inside jquery.ui   -->
-  <script src="assets/js/jquery.min.js" type="text/javascript">
-  </script>
-  <script src="assets/js/jquery-ui.min.js" type="text/javascript">
-  </script>
-  <script src="assets/js/bootstrap.min.js" type="text/javascript">
-  </script>
-  <!--  Forms Validations Plugin -->
-  <script src="assets/js/jquery.validate.min.js">
-  </script>
-  <!--  Plugin for Date Time Picker and Full Calendar Plugin-->
-  <script src="assets/js/moment.min.js">
-  </script>
-  <!--  Date Time Picker Plugin is included in this js file -->
-  <script src="assets/js/bootstrap-datetimepicker.js">
-  </script>
-  <!--  Select Picker Plugin -->
-  <script src="assets/js/bootstrap-selectpicker.js">
-  </script>
-  <!--  Checkbox, Radio, Switch and Tags Input Plugins -->
-  <script src="assets/js/bootstrap-checkbox-radio-switch-tags.js">
-  </script>
-  <!-- Sweet Alert 2 plugin -->
-  <script src="assets/js/sweetalert2.js">
-  </script>
-  <!-- Wizard Plugin    -->
-  <script src="assets/js/jquery.bootstrap.wizard.min.js">
-  </script>
-  <!--  Bootstrap Table Plugin    -->
-  <script src="assets/js/bootstrap-table.js">
-  </script>
-  <!--  Plugin for DataTables.net  -->
-  <script src="assets/js/jquery.datatables.js">
-  </script>
-  <!-- Light Bootstrap Dashboard Core javascript and methods -->
-  <script src="assets/js/bootstrap-reset.js">
-  </script> 
-  <script>
+
+    <script>
     $('input[id=base-input]').change(function() {
       $('#fake-input').val($(this).val().replace("C:\\fakepath\\", ""));
     }
@@ -360,4 +197,3 @@
     }
                    );
   </script>
-</html>
