@@ -1,107 +1,4 @@
-<body>
-    <div class="wrapper">
-      <div class="sidebar" data-color="white">
-        <div class="logo">
-          <a href="dashboard.html" class="logo-text">
-           <img src="<?php echo base_url('assets/img/icon/logo-blue.svg');?>" class="user-image" alt="User Image">
-          </a>
-        </div> 
-        <div class="sidebar-wrapper"> 
-          <ul class="nav">
-            <li class="">
-              <a href="dashboard.html">
-                <img src="<?php echo base_url('assets/img/icon/icon-dashboard_nonaktif.svg');?>" class="" alt="icon">
-                <p>Dashboard
-                </p>
-              </a>
-            </li>
-            <li class="active">
-              <a data-toggle="collapse" href="#componentsExamples" aria-expanded="false">
-                <img src="<?php echo base_url('assets/img/icon/icon-pengaturan_nonaktif.svg');?>" class="" alt="icon">
-                <p>Pengaturan
-                  <b class="pe-7s-angle-down icon-down">
-                  </b>
-                </p>
-              </a>
-              <div class="collapse in" id="componentsExamples">
-                <ul class="nav">
-                  <li class="active">
-                    <a href="aturtoko.html">
-                      <img src="<?php echo base_url('assets/img/icon/icon-toko_aktif.svg');?>" class="" alt="icon">
-                      <p class="color-black">Atur Toko
-                      </p>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="aturtim.html">
-                      <img src="<?php echo base_url('assets/img/icon/icon-tim_nonaktif.svg');?>" class="" alt="icon">
-                      <p>Atur Tim
-                      </p>
-                    </a>
-                  </li>
-                  <li class="">
-                    <a href="aturproduk.html">
-                      <img src="<?php echo base_url('assets/img/icon/icon-produk_nonaktif.svg');?>" class="" alt="icon">
-                      <p>Atur Produk
-                      </p>
-                    </a>
-                  </li>
-                  <li class="">
-                    <a href="pengaturanpos.html">
-                      <img src="<?php echo base_url('assets/img/icon/icon-settingPOS_nonaktif.svg');?>" class="" alt="icon">
-                      <p>Pengaturan POS
-                      </p>
-                    </a>
-                  </li>
-                  <li class="">
-                    <a href="editprofil.html">
-                       <img src="<?php echo base_url('assets/img/icon/icon-editakun_nonaktif.svg');?>" class="" alt="icon">
-                      <p>Edit Profile Akun
-                      </p>
-                    </a>
-                  </li> 
-                </ul>
-              </div>
-            </li> 
-            <li>
-              <a href="MyPOS.html">
-                <img src="<?php echo base_url('assets/img/icon/icon-pos_nonaktif.svg');?>" class="" alt="icon">
-                <p>My POS
-                </p>
-              </a>
-            </li>
-            <li class="">
-              <a href="DaftarTransaksi.html">
-                <img src="<?php echo base_url('assets/img/icon/icon-historitransaksi_nonaktif.svg');?>" class="" alt="icon">
-                <p>Daftar Transaksi
-                </p>
-              </a>
-            </li>
-            <li class="">
-              <a href="Pemberitahuan.html">
-                <img src="<?php echo base_url('assets/img/icon/icon-notifikasi_nonaktif.svg');?>" class="" alt="icon">
-                <p>Pemberitahuan
-                <span>
-                  <small class="label pull-right bg-red">12</small>  
-                </span>
-                </p>
-              </a>
-            </li>
-            <li class="active-pro">
-              <a href="bantuan.html">
-                <img src="<?php echo base_url('assets/img/icon/icon-help.svg');?>" class="" alt="icon">
-                <p>Bantuan</p>
-              </a>
-            </li>
-            <li class="bottom">
-              <a href="#"> 
-                 2017 All Rights Reserved Stoksis.com
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="main-panel">
+     <div class="main-panel">
         <nav class="navbar navbar-default navbar-fixed">
           <div class="container-fluid">
             <div class="navbar-header">
@@ -213,7 +110,7 @@
                   <tbody class="text-center">
                     <tr> 
                       <td>
-                        <img src="<?php echo base_url('assets/img/user.jpg"/>
+                        <img src="<?php echo base_url('assets/img/user.jpg');?>"/>
                       </td>
                       <td>XYZ Mega Store
                       </td>
@@ -242,10 +139,11 @@
                     </tr>
                     <tr> 
                       <td>
-                        <img src="<?php echo base_url('assets/img/user.jpg"/>
+                        <img src="<?php echo base_url('assets/img/user.jpg');?>"/>
                       </td>
                       <td>XYZ Mega Store
                       </td>
+
                       <td>18 September 2017
                       </td>
                       <td>2
@@ -271,7 +169,7 @@
                     </tr>
                     <tr> 
                       <td>
-                        <img src="<?php echo base_url('assets/img/user.jpg"/>
+                        <img src="<?php echo base_url('assets/img/user.jpg');?>"/>
                       </td>
                       <td>XYZ Mega Store
                       </td>
