@@ -24,6 +24,19 @@ class Order extends CI_Controller {
 		template($template, $data);		
 	}
 
+	public function tambahordercartpage()
+	{
+		$template = 'pos/tambahordercartpage';
+		$data['title'] = 'Cart';
+		template($template, $data);		
+	}
+
+	public function payoptiontunai()
+	{
+		$template = 'pos/payoptiontunai';
+		$data['title'] = 'Pay';
+		template($template, $data);		
+	} 
 }
 
 /* End of file Order.php */

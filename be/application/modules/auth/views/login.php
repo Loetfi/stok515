@@ -16,7 +16,7 @@
           </h1>
           <p> Senang bertemu denganmu lagi 
           </p>
-          <form action="dashboard.html" class="login-form" method="post" id="">
+          <form action="<?php echo site_url('dashboard') ?>" class="login-form" method="post" id="">
 
             <div class="row">
               <div class="col-xs-12">

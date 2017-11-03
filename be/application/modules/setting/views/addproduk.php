@@ -1,57 +1,4 @@
-      <div class="main-panel">
-        <nav class="navbar navbar-default navbar-fixed">
-          <div class="container-fluid">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse">
-                <span class="sr-only">Toggle navigation
-                </span>
-                <span class="icon-bar">
-                </span>
-                <span class="icon-bar">
-                </span>
-                <span class="icon-bar">
-                </span>
-              </button> 
-            </div>
-            <div class="collapse navbar-collapse">
-              <a href="dashboard.html" class="logoimage">
-                <img src="<?php echo base_url('assets/img/icon/logo-blue.svg');?>" class="user-image" alt="User Image" style="width: 150px;">
-              </a> 
-              <ul class="nav navbar-nav navbar-right">
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                    <img src="<?php echo base_url('assets/img/icon/icon-profil.svg');?>" class="user-image" alt="User Image"> Nama Akun
-                    <b class="pe-7s-angle-down icon-down">
-                    </b>
-                  </a>
-                  <ul class="dropdown-menu">
-                    <li>
-                      <a href="#" class="p-b-0">Hi, Admin 
-                        <br> 
-                        <p class="color-blue">XYZ Mega Store
-                        </p>
-                      </a>
-                    </li> 
-                    <li class="divider m-0">
-                    </li>
-                    <li>
-                      <a href="#">Ke Website Stoksis
-                      </a>
-                    </li>
-                    <li class="divider m-0">
-                    </li>
-                    <li>
-                      <a href="#">
-                        <img src="<?php echo base_url('assets/img/icon/icon-logout.svg');?>" class="icon-logout" alt="icon"> Keluar
-                      </a>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-        <div class="content">
+  <div class="content">
           <div class="container-fluid">
             <div class="row">
               <div class="content-header">
@@ -526,3 +473,155 @@
       </div>
     </div>
   </body>
+
+  <script type="text/javascript">
+    $().ready(function(){
+      var $validator = $("#wizardForm").validate({
+        rules: {
+          email: {
+            required: true,
+            email: true,
+            minlength: 5
+          }
+          ,
+          first_name: {
+            required: false,
+            minlength: 5
+          }
+          ,
+          last_name: {
+            required: false,
+            minlength: 5
+          }
+          ,
+          website: {
+            required: true,
+            minlength: 5,
+            url: true
+          }
+          ,
+          framework: {
+            required: false,
+            minlength: 4
+          }
+          ,
+          cities: {
+            required: true
+          }
+          ,
+          price:{
+            number: true
+          }
+        }
+      }
+                                                );
+      // you can also use the nav-pills-[blue | azure | green | orange | red] for a different color of wizard
+      $('#wizardCard').bootstrapWizard({
+        tabClass: 'nav nav-pills',
+        nextSelector: '.btn-next',
+        previousSelector: '.btn-back',
+        onNext: function(tab, navigation, index) {
+          var $valid = $('#wizardForm').valid();
+          if(!$valid) {
+            $validator.focusInvalid();
+            return false;
+          }
+        }
+        ,
+        onInit : function(tab, navigation, index){
+          //check number of tabs and fill the entire row
+          var $total = navigation.find('li').length;
+          $width = 100/$total;
+          $display_width = $(document).width();
+          if($display_width < 600 && $total > 3){
+            $width = 50;
+          }
+          navigation.find('li').css('width',$width + '%');
+        }
+        ,
+        onTabClick : function(tab, navigation, index){
+          // Disable the posibility to click on tabs
+          return false;
+        }
+        ,
+        onTabShow: function(tab, navigation, index) {
+          var $total = navigation.find('li').length;
+          var $current = index+1;
+          var wizard = navigation.closest('.card-wizard');
+          // If it's the last tab then hide the last button and show the finish instead
+          if($current >= $total) {
+            $(wizard).find('.btn-next').hide();
+            $(wizard).find('.btn-finish').show();
+          }
+          else if($current == 1){
+            $(wizard).find('.btn-back').hide();
+          }
+          else {
+            $(wizard).find('.btn-back').show();
+            $(wizard).find('.btn-next').show();
+            $(wizard).find('.btn-finish').hide();
+          }
+        }
+      }
+                                      );
+    }
+             );
+    function onFinishWizard(){
+      //here you can do something, sent the form to server via ajax and show a success message with swal
+      swal("Sukses", "Anda sukses menambahkan toko baru", "success");
+    }
+    function onFinishTambahProduk(){
+      //here you can do something, sent the form to server via ajax and show a success message with swal
+      swal("Sukses", "Anda sukses menambahkan produk baru", "success");
+    }
+  </script>
+  <script type="text/javascript">
+    $().ready(function(){
+      $('#tambahIdentitasProduk').validate();
+    }
+             );
+  </script>
+  <script>
+    $('input[id=base-input]').change(function() {
+      $('#fake-input').val($(this).val().replace("C:\\fakepath\\", ""));
+    }
+                                    );
+    <!--==================Javascript code for custom input type file on button ================-->
+      $('input[id=main-input]').change(function() {
+        console.log($(this).val());
+        var mainValue = $(this).val();
+        if(mainValue == ""){
+          document.getElementById("fake-btn").innerHTML = "Choose File";
+        }
+        else{
+          document.getElementById("fake-btn").innerHTML = mainValue.replace("C:\\fakepath\\", "");
+        }
+      }
+                                      );
+    <!--=========================input type file change on button ends here====================-->
+      //    ===================== snippet for profile picture change ============================ //
+      no = 1
+      function readURL(input) {
+        if (input.files && input.files[0]) {
+          var reader = new FileReader();
+          /*
+      reader.onload = function (e) {
+            $('.imgCircle')
+              .attr('src', e.target.result)
+              .width(114)
+              .height(114);
+          };
+          reader.readAsDataURL(input.files[0]);
+      */  
+          document.getElementById('newKotakimage'+ no).innerHTML = '<div id="kotakimage"><a href="#" id="closeimage"><img src="<?=base_url('assets/img/icon/icon-delete_img.png');?>" id="" alt="Profile picture"></a><img src="" id="imagePreview newPict" class="fp-produk-edit newgambar' + (no+1) + '" style="max-width: 100%; max-height:101px;" alt="Profile picture"></div><div id="newKotakimage' + (no+1) + '"></div>';
+          reader.onload = function (e) {
+            $('.newgambar' + no)
+              .attr('src', e.target.result)
+              .width(67);
+          };
+          reader.readAsDataURL(input.files[0]);
+          no++;
+        }
+      }
+    //    =================================== ends here ============================================ //
+  </script>

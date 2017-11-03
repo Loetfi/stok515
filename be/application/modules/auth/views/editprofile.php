@@ -1,92 +1,39 @@
-        <div class="main-panel">
-          <nav class="navbar navbar-default navbar-fixed">
-            <div class="container-fluid">
-              <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse">
-                  <span class="sr-only">Toggle navigation
-                  </span>
-                  <span class="icon-bar">
-                  </span>
-                  <span class="icon-bar">
-                  </span>
-                  <span class="icon-bar">
-                  </span>
-                </button> 
-              </div>
-              <div class="collapse navbar-collapse">
-              <a href="dashboard.html" class="logoimage">
-                  <img src="<?php echo base_url('assets/img/icon/logo-blue.svg');?>" class="user-image" alt="User Image" style="width: 150px;">
-                </a> 
-                <ul class="nav navbar-nav navbar-right">
-                  <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                      <img src="<?php echo base_url('assets/img/icon/icon-profil.svg');?>" class="user-image" alt="User Image"> Nama Akun
-                      <b class="pe-7s-angle-down icon-down">
-                      </b>
-                    </a>
-                    <ul class="dropdown-menu">
-                      <li>
-                        <a href="#" class="p-b-0">Hi, Admin 
-                          <br> 
-                          <p class="color-blue">XYZ Mega Store
-                          </p>
-                        </a>
-                      </li> 
-                      <li class="divider m-0">
-                      </li>
-                      <li>
-                        <a href="#">Ke Website Stoksis
-                        </a>
-                      </li>
-                      <li class="divider m-0">
-                      </li>
-                      <li>
-                        <a href="#">
-                          <img src="<?php echo base_url('assets/img/icon/icon-logout.svg');?>" class="icon-logout" alt="icon"> Keluar
-                        </a>
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
-              </div>
+     <div class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="content-header">
+            <h1>
+              Pengaturan
+              <a href="#" class="btn btn-success btn-fill pull-right">Fitur Premium
+              </a>
+            </h1>
+            <div class="divider-blue">
             </div>
-          </nav>
-          <div class="content">
-            <div class="container-fluid">
-              <div class="row">
-                <div class="content-header">
-                  <h1>
-                    Pengaturan
-                    <a href="#" class="btn btn-success btn-fill pull-right">Fitur Premium
-                    </a>
-                  </h1>
-                  <div class="divider-blue">
-                  </div>
-                  <ol class="breadcrumb">
-                    <li>
-                      <a href="#">
-                        Pengaturan
-                      </a>
-                    </li>   
-                    <li class="active">Edit Profil Akun
-                    </li>
-                  </ol>
-                </div>
+            <ol class="breadcrumb">
+              <li>
+                <a href="#">
+                  Pengaturan
+                </a>
+              </li>   
+              <li class="active">Edit Profil Akun
+              </li>
+            </ol>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card">
+              <div class="header">
+                <h4 class="title color-grey-light">Informasi Akun Anda
+                </h4> 
               </div>
-              <div class="row">
-                <div class="col-md-12">
-                  <div class="card">
-                    <div class="header">
-                      <h4 class="title color-grey-light">Informasi Akun Anda
-                      </h4> 
-                    </div>
-                    <br>
-                    <form id="" action="#" method="" novalidate="">
-                      <div class="row">
-                        <div class="col-md-4 col-md-offset-4">
-                          <div class="text-center bg-form">
-                            <div class="img-section">
-                             <img class="avatar-toko border-gray" src="<?php echo base_url('assets/img/icon/icon-profil.svg');?>" alt="...">
+              <br>
+              <form id="" action="#" method="" novalidate="">
+                <div class="row">
+                  <div class="col-md-4 col-md-offset-4">
+                    <div class="text-center bg-form">
+                      <div class="img-section">
+                       <img class="avatar-toko border-gray" src="<?php echo base_url('assets/img/icon/icon-profil.svg');?>" alt="...">
                              <!--  <span class="fake-icon-edit" id="PicUpload" style="color: #000;">
                                 <span class="pe-7s-plus plus" style="font-size: 80px;top: 20px;left: 25px;position: absolute;">
                                 </span>
@@ -127,48 +74,48 @@
                       <div class="row"> 
                         <div class="col-md-4 col-md-offset-4">
                          <div class="input-group" style="width:100%;">
-                            <input type="password" placeholder="Kata Sandi" class="form-control" disabled value="password"> 
-                          </div>
+                          <input type="password" placeholder="Kata Sandi" class="form-control" disabled value="password"> 
                         </div>
-                      </div> 
-                      <br>
-                      <br>
-                      <div class="row">
-                        <div class="col-md-4 col-md-offset-4">
-                          <div class="footer">
-                            <a href="EditProfilAkun.html" class="btn btn-warning btn-wd btn-next btn-block">Ubah Profil</a>  
-                            <div class="clearfix">
-                            </div>
+                      </div>
+                    </div> 
+                    <br>
+                    <br>
+                    <div class="row">
+                      <div class="col-md-4 col-md-offset-4">
+                        <div class="footer">
+                          <a href="<?php echo site_url('auth/profil/editakun') ?>" class="btn btn-warning btn-wd btn-next btn-block">Ubah Profil</a>  
+                          <div class="clearfix">
                           </div>
                         </div>
                       </div>
-                    </form>
-                  </div>
+                    </div>
+                  </form>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div> 
-    </body>
+      </div>
+    </div> 
+  </body>
 
-    <script>
+  <script>
     $('input[id=base-input]').change(function() {
       $('#fake-input').val($(this).val().replace("C:\\fakepath\\", ""));
     }
-                                    );
+    );
     <!--==================Javascript code for custom input type file on button ================-->
-      $('input[id=main-input]').change(function() {
-        console.log($(this).val());
-        var mainValue = $(this).val();
-        if(mainValue == ""){
-          document.getElementById("fake-btn").innerHTML = "Choose File";
-        }
-        else{
-          document.getElementById("fake-btn").innerHTML = mainValue.replace("C:\\fakepath\\", "");
-        }
+    $('input[id=main-input]').change(function() {
+      console.log($(this).val());
+      var mainValue = $(this).val();
+      if(mainValue == ""){
+        document.getElementById("fake-btn").innerHTML = "Choose File";
       }
-                                      );
+      else{
+        document.getElementById("fake-btn").innerHTML = mainValue.replace("C:\\fakepath\\", "");
+      }
+    }
+    );
     <!--=========================input type file change on button ends here====================-->
       //    ===================== snippet for profile picture change ============================ //
       function readURL(input) {
@@ -176,9 +123,9 @@
           var reader = new FileReader();
           reader.onload = function (e) {
             $('.imgCircle')
-              .attr('src', e.target.result)
-              .width(114)
-              .height(114);
+            .attr('src', e.target.result)
+            .width(114)
+            .height(114);
           };
           reader.readAsDataURL(input.files[0]);
         }
@@ -195,5 +142,5 @@
         $pwd.attr('type', 'password');
       }
     }
-                   );
+    );
   </script>

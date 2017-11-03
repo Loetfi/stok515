@@ -39,10 +39,10 @@
                       </p>
                     </a>
                   </li>
-                  <li class="active">
+                  <li>
                     <a href="<?php echo site_url('setting/produk'); ?>">
-                      <img src="<?php echo base_url('assets/img/icon/icon-produk_aktif.svg');?>" class="" alt="icon">
-                      <p class="color-black">Atur Produk
+                      <img src="<?php echo base_url('assets/img/icon/icon-produk_nonaktif.svg');?>" class="" alt="icon">
+                      <p>Atur Produk
                       </p>
                     </a>
                   </li>
