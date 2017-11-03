@@ -1,137 +1,4 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/png" href="assets/img/favicon.svg">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <title>My POS | STOKSIS
-    </title>
-    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
-    <meta name="viewport" content="width=device-width" />
-    <!-- Bootstrap core CSS     -->
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
-    <!-- Animation library for notifications   -->
-    <link href="assets/css/animate.min.css" rel="stylesheet"/>
-    <link href="assets/css/bootstrap-reset.css" rel="stylesheet"/>
-    <link href="assets/css/my-style.css" rel="stylesheet"/>
-    <link href="assets/css/helper.css" rel="stylesheet"/>
-
-    <link href="assets/css/nouislider.min.css" rel="stylesheet"/>
-    <script src="assets/js/nouislider.min.js"></script>
-    <!--     Fonts and icons     -->
-    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="assets/css/pe-icon-7-stroke.css" rel="stylesheet" />
-
-
-  </head>
-  <body>
-    <div class="wrapper">
-      <div class="sidebar" data-color="white">
-        <div class="logo">
-          <a href="dashboard.html" class="logo-text">
-            <img src="assets/img/icon/logo-blue.svg" class="user-image" alt="User Image">
-          </a>
-        </div> 
-        <div class="sidebar-wrapper"> 
-          <ul class="nav">
-            <li class="">
-              <a href="dashboard.html">
-                <img src="assets/img/icon/icon-dashboard_nonaktif.svg" class="" alt="icon">
-                <p>Dashboard
-                </p>
-              </a>
-            </li>
-            <li class="">
-              <a data-toggle="collapse" href="#componentsExamples" aria-expanded="false">
-                <img src="assets/img/icon/icon-pengaturan_nonaktif.svg" class="" alt="icon">
-                <p>Pengaturan
-                  <b class="pe-7s-angle-down icon-down">
-                  </b>
-                </p>
-              </a>
-              <div class="collapse" id="componentsExamples">
-                <ul class="nav">
-                  <li class="">
-                    <a href="aturtoko.html">
-                      <img src="assets/img/icon/icon-toko-nonaktif.svg" class="" alt="icon">
-                      <p>Atur Toko
-                      </p>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="aturtim.html">
-                      <img src="assets/img/icon/icon-tim_nonaktif.svg" class="" alt="icon">
-                      <p>Atur Tim
-                      </p>
-                    </a>
-                  </li>
-                  <li class="">
-                    <a href="aturproduk.html">
-                      <img src="assets/img/icon/icon-produk_nonaktif.svg" class="" alt="icon">
-                      <p>Atur Produk
-                      </p>
-                    </a>
-                  </li>
-                  <li class="">
-                    <a href="pengaturanpos.html">
-                      <img src="assets/img/icon/icon-settingPOS_nonaktif.svg" class="" alt="icon">
-                      <p>Pengaturan POS
-                      </p>
-                    </a>
-                  </li>
-                  <li class="">
-                    <a href="editprofil.html">
-                      <img src="assets/img/icon/icon-editakun_nonaktif.svg" class="" alt="icon">
-                      <p>Edit Profile Akun
-                      </p>
-                    </a>
-                  </li> 
-                </ul>
-              </div>
-            </li> 
-            <li class="active">
-              <a href="MyPOS.html">
-                <img src="assets/img/icon/icon-pos_aktif.svg" class="" alt="icon">
-                <p>My POS
-                </p>
-              </a>
-            </li>
-            <li class="">
-              <a href="DaftarTransaksi.html">
-                <img src="assets/img/icon/icon-historitransaksi_nonaktif.svg" class="" alt="icon">
-                <p>Daftar Transaksi
-                </p>
-              </a>
-            </li>
-            <li class="">
-              <a href="Pemberitahuan.html">
-                <img src="assets/img/icon/icon-notifikasi_nonaktif.svg" class="" alt="icon">
-                <p>Pemberitahuan
-                  <span>
-                    <small class="label pull-right bg-red">12
-                    </small>  
-                  </span>
-                </p>
-              </a>
-            </li>
-            <li class="active-pro">
-              <a href="bantuan.html">
-                <img src="assets/img/icon/icon-help.svg" class="" alt="icon">
-                <p>Bantuan
-                </p>
-              </a>
-            </li>
-            <li class="bottom">
-              <a href="#"> 
-                2017 All Rights Reserved Stoksis.com
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="main-panel">
+     <div class="main-panel">
         <nav class="navbar navbar-default navbar-fixed">
           <div class="container-fluid">
             <div class="navbar-header">
@@ -148,12 +15,12 @@
             </div>
             <div class="collapse navbar-collapse"> 
               <a href="dashboard.html" class="logoimage">
-                <img src="assets/img/icon/logo-blue.svg" class="user-image" alt="User Image" style="width: 150px;">
+                <img src="<?php echo base_url('assets/img/icon/logo-blue.svg');?>" class="user-image" alt="User Image" style="width: 150px;">
               </a> 
               <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                    <img src="assets/img/icon/icon-profil.svg" class="user-image" alt="User Image"> Nama Akun
+                    <img src="<?php echo base_url('assets/img/icon/icon-profil.svg');?>" class="user-image" alt="User Image"> Nama Akun
                     <b class="pe-7s-angle-down icon-down">
                     </b>
                   </a>
@@ -175,7 +42,7 @@
                     </li>
                     <li>
                       <a href="#">
-                        <img src="assets/img/icon/icon-logout.svg" class="icon-logout" alt="icon"> Keluar
+                        <img src="<?php echo base_url('assets/img/icon/icon-logout.svg');?>" class="icon-logout" alt="icon"> Keluar
                       </a>
                     </li>
                   </ul>
@@ -221,7 +88,7 @@
                         <input type="input" style="width: 220px;" class="form-control bordered" placeholder="&#xf002; Cari Produk/Toko Disini">
                       </div> 
                       <a href="TambahOrderChartPage.html">
-                        <img src="assets/img/icon/icon-cart.svg" class="icon-cart" alt="icon">
+                        <img src="<?php echo base_url('assets/img/icon/icon-cart.svg');?>" class="icon-cart" alt="icon">
                         <label id="cart-badge" class="badge bg-red">1</label> 
                       </a> 
                     </form>
@@ -236,7 +103,7 @@
                       <th colspan="3" style="width:33.3%;text-align: center;border-top: 1px solid #e7ecf1;border-right: 1px solid #e7ecf1;">
                         <div class="dropdown dropdown-full">
                           <button class="btn btn-default btn-simple dropdown-toggle" type="button" id="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                            <img src="assets/img/icon/icon-kategori.svg" class="icon-kategori" alt="icon">
+                            <img src="<?php echo base_url('assets/img/icon/icon-kategori.svg');?>" class="icon-kategori" alt="icon">
                           </button>
                           <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">  
                             <li>
@@ -324,13 +191,13 @@
                       </th>
                       <th colspan="3" style="width:33.3%;text-align: center;border-top: 1px solid #e7ecf1;border-right: 1px solid #e7ecf1;">
                         <button class="btn btn-default btn-simple p-0" data-toggle="modal" data-target="#filterProduk">
-                          <img src="assets/img/icon/icon-filter.svg" class="icon-filter" alt="icon">
+                          <img src="<?php echo base_url('assets/img/icon/icon-filter.svg');?>" class="icon-filter" alt="icon">
                         </button>
                       </th>
                       <th colspan="3" style="width:33.3%;text-align: center;border-top: 1px solid #e7ecf1;">
                         <div class="dropdown dropdown-full">
                           <button class="btn btn-default btn-simple dropdown-toggle" type="button" id="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                            <img src="assets/img/icon/icon-sort.svg" class="icon-kategori" alt="icon">
+                            <img src="<?php echo base_url('assets/img/icon/icon-sort.svg');?>" class="icon-kategori" alt="icon">
                           </button>
                           <ul class="dropdown-menu dropdown-filter" aria-labelledby="dropdownMenu1"> 
                             <li>
@@ -379,7 +246,7 @@
                   <tbody class="text-center">
                     <tr> 
                       <td>
-                        <img src="assets/img/user.jpg"/>
+                        <img src="<?php echo base_url('assets/img/user.jpg');?>"/>
                       </td>
                       <td>ZARA - Jaket Kam...
                       </td>
@@ -727,7 +594,7 @@
                 <div class="card no-shadow">
                   <div class="header p-0">
                     <div class="author">
-                      <img class="avatar-produk border-gray" src="assets/img/iphone.png" style="max-width: 100%;border:0;" alt="...">
+                      <img class="avatar-produk border-gray" src="<?php echo base_url('assets/img/iphone.png');?>" style="max-width: 100%;border:0;" alt="...">
                     </div>
                     <small class="color-grey-light">Elektronik - Smartphone
                     </small>
@@ -771,13 +638,13 @@
                               <div class="input-group"> 
                                 <span class="input-group-btn"> 
                                   <button style="border:0;" type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="quant[1]">
-                                    <img src="assets/img/icon/icon-minus_qty.svg" width="20" alt="icon">
+                                    <img src="<?php echo base_url('assets/img/icon/icon-minus_qty.svg');?>" width="20" alt="icon">
                                   </button>
                                 </span>
                                 <input type="text" name="quant[1]" class="input_qty form-control text-center input-number" value="1" min="0" max="999">
                                 <span class="input-group-btn">
                                   <button style="border:0;" type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[1]">
-                                    <img src="assets/img/icon/icon-plus_qty.svg" width="20" alt="icon">
+                                    <img src="<?php echo base_url('assets/img/icon/icon-plus_qty.svg');?>" width="20" alt="icon">
                                   </button>
                                 </span>
                               </div>
@@ -804,44 +671,7 @@
       </div>
     </div>
   </body>
-  <!--   Core JS Files and PerfectScrollbar library inside jquery.ui   -->
-  <script src="assets/js/jquery.min.js" type="text/javascript">
-  </script>
-  <script src="assets/js/jquery-ui.min.js" type="text/javascript">
-  </script>
-  <script src="assets/js/bootstrap.min.js" type="text/javascript">
-  </script>
 
-  <!--  Forms Validations Plugin -->
-  <script src="assets/js/jquery.validate.min.js">
-  </script>
-  <!--  Plugin for Date Time Picker and Full Calendar Plugin-->
-  <script src="assets/js/moment.min.js">
-  </script>
-  <!--  Date Time Picker Plugin is included in this js file -->
-  <script src="assets/js/bootstrap-datetimepicker.js">
-  </script>
-  <!--  Select Picker Plugin -->
-  <script src="assets/js/bootstrap-selectpicker.js">
-  </script>
-  <!--  Checkbox, Radio, Switch and Tags Input Plugins -->
-  <script src="assets/js/bootstrap-checkbox-radio-switch-tags.js">
-  </script>
-  <!-- Sweet Alert 2 plugin -->
-  <script src="assets/js/sweetalert2.js">
-  </script>
-  <!-- Wizard Plugin    -->
-  <script src="assets/js/jquery.bootstrap.wizard.min.js">
-  </script>
-  <!--  Bootstrap Table Plugin    -->
-  <script src="assets/js/bootstrap-table.js">
-  </script>
-  <!--  Plugin for DataTables.net  -->
-  <script src="assets/js/jquery.datatables.js">
-  </script>
-  <!-- Light Bootstrap Dashboard Core javascript and methods -->
-  <script src="assets/js/bootstrap-reset.js">
-  </script> 
   <script type="text/javascript">
     $('.btn-number').click(function(e){
       e.preventDefault();
@@ -914,7 +744,3 @@
     }
                               );
   </script>
-  <script type="text/javascript">
-    
-  </script>
-</html>

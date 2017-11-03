@@ -17,6 +17,13 @@ class Order extends CI_Controller {
 		template($template, $data);		
 	}
 
+	public function chooseproduk()
+	{
+		$template = 'pos/tambahorderchooseproduk';
+		$data['title'] = 'Tambah Order Choose Produk';
+		template($template, $data);		
+	}
+
 }
 
 /* End of file Order.php */
