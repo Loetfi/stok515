@@ -25,7 +25,7 @@ class Callback extends CI_Controller {
 			$this->session->set_userdata( $array );
 
 
-			redirect('afterlogin','refresh');
+			redirect('welcome','refresh');
 
 		} else {
 			//mengembalikan ke auth register
