@@ -24,6 +24,7 @@ class Auth extends CI_Controller {
 		$this->session->unset_userdata('namatwitter');
 		$this->session->unset_userdata('usernametwitter');
 		$this->session->unset_userdata('emailtwitter');
+		$this->session->unset_userdata('FBRLH_state');
 		
 		
 		// echo "login";
