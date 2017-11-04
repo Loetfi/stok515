@@ -37,7 +37,7 @@ function facebook()
 
     $permissions = ['email']; // Optional permissions
   
-    $loginUrl = $helper->getLoginUrl('//'.$_SERVER["HTTP_HOST"].str_replace(basename($_SERVER['SCRIPT_NAME']), "", $_SERVER['SCRIPT_NAME']).'/index.php/omni/facebook/callback/index', $permissions);
+    $loginUrl = $helper->getLoginUrl('http://stok.awanesia.com/5T0k515/be/index.php/omni/facebook/callback/index', $permissions);
 
       // print_r(expression)
     return htmlspecialchars($loginUrl); 
