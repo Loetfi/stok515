@@ -47,7 +47,7 @@
                 atau masuk dengan akun sosial media
               </div>
               <div class="text-center" style="margin-bottom: 50px;margin-top: 30px;">
-                <a href=""><img class="" src="<?php echo base_url('assets/img/social/fb.png');?>"></a>
+                <a href="<?php echo facebook(); ?>"><img class="" src="<?php echo base_url('assets/img/social/fb.png');?>"></a>
                 <a href=""><img class="" src="<?php echo base_url('assets/img/social/twitter.png');?>"></a>
                 <a href=""><img class="" src="<?php echo base_url('assets/img/social/google.png');?>"></a>
                 <a href=""><img class="" src="<?php echo base_url('assets/img/social/instagram.png');?>"></a>

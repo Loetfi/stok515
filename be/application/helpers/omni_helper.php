@@ -25,8 +25,8 @@ function facebook()
 {
 	$ci =& get_instance();
 	require_once  APPPATH.'../omni/facebook/php-sdk-v4/src/Facebook/autoload.php';
-	$appid      = '1797631263599363';
-	$app_secret = '4c4f11292235c85549f5d3eb5acadb3f'; 
+	$appid      = '1989410064664938';
+	$app_secret = 'e6c0c33647eb687c6bde7d65357de537'; 
 	$fb = new Facebook\Facebook([
           'app_id'                => $appid, // Replace {app-id} with your app id
           'app_secret'            => $app_secret,
@@ -36,13 +36,8 @@ function facebook()
 	$helper = $fb->getRedirectLoginHelper();
 
     $permissions = ['email']; // Optional permissions
-
-// http://localhost:8888/ibiddevelopment/ibiddevwebapp/ibidadmsuser/ibid_webapp/index.php/auth/register
-
-    // $loginUrl = $helper->getLoginUrl('http://localhost:8888/ibiddevelopment/ibiddevwebapp/ibidadmsuser/ibid_webapp/index.php/omni/facebook/callback/index', $permissions); 
-    // $loginUrl = $helper->getLoginUrl('http://localhost:8888/ibiddevelopment/admsui/Ibid_ADMS_WebBackend/index.php/omni/facebook/callback/index', $permissions);
-    // $loginUrl = $helper->getLoginUrl('http://localhost:55/02.JOB/ATS/IBID/Ibid_ADMS_WebBackend/index.php/omni/facebook/callback/index', $permissions);
-    $loginUrl = $helper->getLoginUrl('http://ibidadmsdevwebfront.azurewebsites.net/index.php/omni/facebook/callback/index', $permissions);
+  
+    $loginUrl = $helper->getLoginUrl('//'.$_SERVER["HTTP_HOST"].str_replace(basename($_SERVER['SCRIPT_NAME']), "", $_SERVER['SCRIPT_NAME']).'/index.php/omni/facebook/callback/index', $permissions);
 
       // print_r(expression)
     return htmlspecialchars($loginUrl); 
