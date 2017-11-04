@@ -11,6 +11,21 @@ class Auth extends CI_Controller {
 
 	public function login()
 	{
+		$this->session->unset_userdata('OAUTH_ACCESS_TOKEN');
+		$this->session->unset_userdata('namefb');
+		$this->session->unset_userdata('emailfb');
+		$this->session->unset_userdata('tokenfb');
+		$this->session->unset_userdata('usernamefb');
+		$this->session->unset_userdata('emaillinkedin');
+		$this->session->unset_userdata('namelinkedin');
+		$this->session->unset_userdata('emailgoogle');
+		$this->session->unset_userdata('namegoogle');
+
+		$this->session->unset_userdata('namatwitter');
+		$this->session->unset_userdata('usernametwitter');
+		$this->session->unset_userdata('emailtwitter');
+		
+		
 		// echo "login";
 		$data['title'] = 'Sign In Page';
 		$template = 'auth/login';

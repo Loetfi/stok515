@@ -19,8 +19,10 @@ class Welcome extends CI_Controller {
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
 	public function index()
-	{ 
- 		echo "welcome";
+	{ 	
+		echo "<pre>";
+		print_r($this->session->all_userdata());
+ 		// echo "welcome";
 
 	}
 }
