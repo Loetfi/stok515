@@ -34,7 +34,7 @@
                   </label>
                   <input type="input" style="width: 220px;" class="form-control bordered" placeholder="&#xf002; Cari Produk/Toko Disini"> 
                 </div> 
-                <a href="TambahOrderChartPage.html">
+                <a href="<?php echo site_url('pos/order/tambahordercartpage') ?>">
                   <img src="<?php echo base_url('assets/img/icon/icon-cart.svg');?>" class="icon-cart" alt="icon">
                   <label id="cart-badge" class="badge bg-red">1</label> 
                 </a> 
@@ -319,7 +319,7 @@
         <a href="<?php echo site_url('pos/order/payoptiontunai') ?>" class="btn btn-success btn-wd btn-fill">
           Tunai
         </a>
-        <a href="TambahOrderPayOptionCC.html" class="btn btn-warning btn-wd btn-fill">
+        <a href="<?php echo site_url('pos/order/payoptioncc') ?>" class="btn btn-warning btn-wd btn-fill">
           Kartu Kredit
         </a>
       </div>

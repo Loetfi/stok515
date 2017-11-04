@@ -73,14 +73,16 @@
               </a>
             </li>
             <li class="">
-              <a href="DaftarTransaksi.html">
+              <!-- DaftarTransaksi.html -->
+              <a href="<?php echo site_url('transaction') ?>">
                 <img src="<?php echo base_url('assets/img/icon/icon-historitransaksi_nonaktif.svg');?>" class="" alt="icon">
                 <p>Daftar Transaksi
                 </p>
               </a>
             </li>
             <li class="">
-              <a href="Pemberitahuan.html">
+              <!-- Pemberitahuan.html -->
+              <a href="<?php echo site_url('notif'); ?>">
                 <img src="<?php echo base_url('assets/img/icon/icon-notifikasi_nonaktif.svg');?>" class="" alt="icon">
                 <p>Pemberitahuan
                   <span>

@@ -30,7 +30,7 @@
                 </label>
                 <input type="input" class="form-control bordered" placeholder="&#xf002; Cari Toko Disini">
               </div>
-              <a href="tambahtoko.html" class="btn btn-primary btn-fill"><img src="<?php echo base_url('assets/img/icon/plus-add_btn.svg');?>" class="icon-plus" alt="icon"> Tambah Toko
+              <a href="<?php echo site_url('setting/toko/add') ?>" class="btn btn-primary btn-fill"><img src="<?php echo base_url('assets/img/icon/plus-add_btn.svg');?>" class="icon-plus" alt="icon"> Tambah Toko
               </a> 
             </form>
           </div>

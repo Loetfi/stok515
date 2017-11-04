@@ -27,6 +27,14 @@ class Auth extends CI_Controller {
 		
 	}
 
+	public function newpassword()
+	{
+		$data['title'] 	= 'New Password';
+		$template 		= 'auth/newpassword';
+		template_auth($template , $data);
+		
+	}
+
 	public function signup()
 	{
 		// echo "login";

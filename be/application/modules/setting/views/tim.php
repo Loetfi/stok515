@@ -30,7 +30,7 @@
                         </label>
                         <input type="input" style="width: 220px;" class="form-control bordered" placeholder="&#xf002; Cari Anggota Tim Disini">
                       </div>
-                      <a href="tambahtim.html" class="btn btn-primary btn-fill"><img src="<?php echo base_url('assets/img/icon/plus-add_btn.svg');?>" class="icon-plus" alt="icon"> Tambah Tim
+                      <a href="<?php echo site_url('setting/tim/add') ?>" class="btn btn-primary btn-fill"><img src="<?php echo base_url('assets/img/icon/plus-add_btn.svg');?>" class="icon-plus" alt="icon"> Tambah Tim
                       </a> 
                     </form>
                   </div>
@@ -62,7 +62,8 @@
                       <td>XYZ Mega Store
                       </td>    
                       <td class="td-actions text-right">
-                        <a href="edittim.html" class="font-30" rel="tooltip" title="Edit">
+                        <!-- edittim.html -->
+                        <a href="<?php echo site_url('setting/tim/edit') ?>" class="font-30" rel="tooltip" title="Edit">
                           <img src="<?php echo base_url('assets/img/icon/icon-edit.svg');?>" class="icon-edit" alt="icon">
                         </a>
                         <a href="#" class="font-30" rel="tooltip" title="Hapus" data-toggle="modal" data-target="#hapus">
@@ -81,7 +82,7 @@
                       <td>XYZ Mega Store
                       </td>    
                       <td class="td-actions text-right">
-                        <a href="edittim.html" class="font-30" rel="tooltip" title="Edit">
+                        <a href="<?php echo site_url('setting/toko/tim') ?>" class="font-30" rel="tooltip" title="Edit">
                           <img src="<?php echo base_url('assets/img/icon/icon-edit.svg');?>" class="icon-edit" alt="icon">
                         </a>
                         <a href="#" class="font-30" rel="tooltip" title="Hapus" data-toggle="modal" data-target="#hapus">
@@ -100,7 +101,7 @@
                       <td>XYZ Mega Store
                       </td>    
                       <td class="td-actions text-right">
-                        <a href="edittim.html" class="font-30" rel="tooltip" title="Edit">
+                        <a href="<?php echo site_url('setting/toko/tim') ?>" class="font-30" rel="tooltip" title="Edit">
                           <img src="<?php echo base_url('assets/img/icon/icon-edit.svg');?>" class="icon-edit" alt="icon">
                         </a>
                         <a href="#" class="font-30" rel="tooltip" title="Hapus" data-toggle="modal" data-target="#hapus">

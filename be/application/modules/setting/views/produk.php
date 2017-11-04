@@ -30,7 +30,7 @@
                   </label>
                   <input type="input" class="form-control bordered" placeholder="&#xf002; Cari Produk Disini">
                 </div>
-                <a href="<?php echo site_url('produk/addproduk/') ?>" class="btn btn-primary btn-fill">
+                <a href="<?php echo site_url('setting/produk/add/') ?>" class="btn btn-primary btn-fill">
                   <img src="<?php echo base_url('assets/img/icon/plus-add_btn.svg');?>" class="icon-plus" alt="icon"> Tambah Produk
                 </a> 
               </form>
@@ -106,7 +106,7 @@
                   <a href="#" class="font-30" rel="tooltip" title="Lihat" data-toggle="modal" data-target="#lihatProduk">
                     <img src="<?php echo base_url('assets/img/icon/icon-viewdetails.svg');?>" class="icon-view" alt="icon">
                   </a>
-                  <a href="editProduk.html" class="font-30" rel="tooltip" title="Edit">
+                  <a href="<?php echo site_url('setting/produk/edit') ?>" class="font-30" rel="tooltip" title="Edit">
                     <img src="<?php echo base_url('assets/img/icon/icon-edit.svg');?>" class="icon-edit" alt="icon">
                   </a>
                   <a href="#" class="font-30" rel="tooltip" title="Hapus" data-toggle="modal" data-target="#hapusproduk">

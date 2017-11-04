@@ -87,6 +87,7 @@
     <!-- Light Bootstrap Dashboard Core javascript and methods -->
     <script src="<?php echo base_url('assets/js/bootstrap-reset.js');?>"></script> 
 
+    <link href="<?php echo base_url('assets/css/jquery-ui.css'); ?>" rel="stylesheet"/>
 
     <link href="<?php echo base_url('assets/css/bootstrap.min.css');?>" rel="stylesheet" />
     <!-- Animation library for notifications   -->

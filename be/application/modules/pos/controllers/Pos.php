@@ -10,6 +10,13 @@ class Pos extends CI_Controller {
 		template($template, $data);		
 	}
 
+	public function detail()
+	{
+		$template = 'pos/detailtransaksipos';
+		$data['title'] = 'My POS';
+		template($template, $data);		
+	}
+
 }
 
 /* End of file Pos.php */

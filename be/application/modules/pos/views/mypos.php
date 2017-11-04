@@ -60,7 +60,7 @@
                   <td><img class="social" src="<?php echo base_url('assets/img/icon/icon-ig.svg');?>"> Instagram
                   </td>    
                   <td class="td-actions text-right"> 
-                    <a class="btn btn-default btn-simple" href="DetailTransaksiMyPOS.html">
+                    <a class="btn btn-default btn-simple" href="<?php echo site_url('pos/detail') ?>">
                       <i style="color: #333;" class="fa fa-angle-right">
                       </i>
                     </a>  
@@ -77,7 +77,7 @@
                   <td><img class="social" src="<?php echo base_url('assets/img/icon/icon-ig.svg');?>"> Instagram
                   </td>    
                   <td class="td-actions text-right"> 
-                    <a class="btn btn-default btn-simple" href="DetailTransaksiMyPOS.html">
+                    <a class="btn btn-default btn-simple" href="<?php echo site_url('pos/detail/') ?>">
                       <i style="color: #333;" class="fa fa-angle-right">
                       </i>
                     </a>  
@@ -94,7 +94,7 @@
                   <td><img class="social" src="<?php echo base_url('assets/img/icon/icon-ig.svg');?>"> Instagram
                   </td>    
                   <td class="td-actions text-right"> 
-                    <a class="btn btn-default btn-simple" href="DetailTransaksiMyPOS.html">
+                    <a class="btn btn-default btn-simple" href="<?php echo site_url('pos/detail') ?>">
                       <i style="color: #333;" class="fa fa-angle-right">
                       </i>
                     </a>  

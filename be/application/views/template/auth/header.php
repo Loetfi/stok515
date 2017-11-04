@@ -27,7 +27,7 @@
   <?php 
   $login = array('assets/js/jquery.min.js');
   $bukan = array('assets/js/jquery-1.10.2.js', 'assets/js/jquery.validate.min.js');
-  $jquery = ( (strtolower($this->uri->segment(2)) == 'login') or (strtolower($this->uri->segment(2)) == 'signup') ) ? $login : $bukan ; 
+  $jquery = ( (strtolower($this->uri->segment(2)) == 'login') or (strtolower($this->uri->segment(2)) == '') or (strtolower($this->uri->segment(2)) == 'signup') ) ? $login : $bukan ; 
 
   foreach ($jquery as $key) { 
     echo '<script src="'.base_url($key).'" type="text/javascript"></script>'; 

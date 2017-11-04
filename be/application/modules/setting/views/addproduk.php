@@ -16,7 +16,7 @@
                     </a>
                   </li> 
                   <li>
-                    <a href="aturProduk.html">
+                    <a href="<?php echo site_url('setting/produk') ?>">
                       Atur Produk
                     </a>
                   </li> 
@@ -445,7 +445,7 @@
             </div>
           </div>
           <div class="modal-footer text-center m-l-r-15"> 
-            <a href="tambahprodukAssign.html" class="btn btn-info btn-fill">OK
+            <a href="<?php echo site_url('setting/produk/assign') ?>" class="btn btn-info btn-fill">OK
             </a>
           </div> 
         </div>
@@ -465,7 +465,7 @@
             <p class="text-center m-b-40">Anda sukses menambahkan produk baru
             </p>
             <div class="form-group">
-              <a href="aturProduk.html" class="btn btn-info btn-fill btn-block">OK
+              <a href="<?php echo site_url('setting/produk') ?>" class="btn btn-info btn-fill btn-block">OK
               </a>
             </div>
           </div> 

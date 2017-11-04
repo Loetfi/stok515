@@ -37,6 +37,13 @@ class Order extends CI_Controller {
 		$data['title'] = 'Pay';
 		template($template, $data);		
 	} 
+
+	public function payoptioncc()
+	{
+		$template = 'pos/payoptioncc';
+		$data['title'] = 'Pay';
+		template($template, $data);		
+	} 
 }
 
 /* End of file Order.php */

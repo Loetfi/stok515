@@ -11,6 +11,25 @@ class Toko extends CI_Controller {
 		template($template , $data);		
 	}
 
+	public function add()
+	{
+		$data['title'] = 'Atur Toko';
+		$template = 'setting/tambahtoko';
+
+		template($template , $data);		
+	}
+
+
+	public function edit()
+	{
+		$data['title'] = 'Atur Toko';
+		$template = 'setting/edittoko';
+
+		template($template , $data);		
+	}
+
+
+
 }
 
 /* End of file Toko.php */
