@@ -7,7 +7,7 @@ require_once  APPPATH.'../omni/facebook/php-sdk-v4/src/Facebook/autoload.php';
 Class Callback extends CI_Controller
 {
 	var $appid      = '1989410064664938';
-	var $app_secret = 'e6c0c33647eb687c6bde7d65357de537'; 
+	var $app_secret = '4c4f11292235c85549f5d3eb5acadb3f'; 
 
 	public function index()
 	{ 
