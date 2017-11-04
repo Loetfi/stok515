@@ -109,7 +109,7 @@ Class Callback extends CI_Controller
             // redirect('omni/facebook/register','refresh');
 
 
-            redirect('afterlogin','refresh'); 
+            redirect('welcome','refresh'); 
 
 
         }
