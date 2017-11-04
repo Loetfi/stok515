@@ -48,7 +48,7 @@
               </div>
               <div class="text-center" style="margin-bottom: 50px;margin-top: 30px;">
                 <a href="<?php echo facebook(); ?>"><img class="" src="<?php echo base_url('assets/img/social/fb.png');?>"></a>
-                <a href=""><img class="" src="<?php echo base_url('assets/img/social/twitter.png');?>"></a>
+                <a href="<?php echo site_url('omni/twitter/twitter/') ?>"><img class="" src="<?php echo base_url('assets/img/social/twitter.png');?>"></a>
                 <a href="<?php echo google(); ?>"><img class="" src="<?php echo base_url('assets/img/social/google.png');?>"></a>
                 <a href=""><img class="" src="<?php echo base_url('assets/img/social/instagram.png');?>"></a>
                 <a href=""><img class="" src="<?php echo base_url('assets/img/social/yahoo.png');?>"></a>
