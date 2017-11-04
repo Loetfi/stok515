@@ -27,29 +27,12 @@ class Callback extends CI_Controller {
 				);
 				$this->session->set_userdata( $array );
 
-				redirect('afterlogin','refresh'); 
-
-				
-				// $objTwitterApi = new TwitterLoginAPI;
-				// $return = $objTwitterApi->view();
-
-				// $array = array(
-				// 	'namatwitter' 	=> @$return['name'],
-				// 	'usernametwitter' 	=> @$return['screen_name'],
-				// 	'emailtwitter' 	=> @$return['email'],
-				// );
-
-				// $this->session->set_userdata( $array );
-
-				// redirect('afterlogin','refresh'); 
-
-				// header("Location: twitter?connected=Y");
-				// redirect('omni/twitter/twitter?connected=Y','refresh');
+				redirect('welcome','refresh');  
 				exit;
 			} else {
 				// header("Location: twitter?connected=F");
 				$this->session->set_flashdata('message', '<div class="alert alert-warning"> Kesalahan Terjadi, Silahkan diulangi kembali. </div>');
-				redirect('auth/loginCustomer','refresh');
+				redirect('auth/login','refresh');
 				exit;
 			}
 		}

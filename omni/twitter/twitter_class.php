@@ -1,12 +1,12 @@
 <?php
 class TwitterLoginAPI
 {
-	protected  $consumer_key	 = 'NLZQJM6TiB9sriugja43P0xCj'; //Your Consumer Key
+	protected  $consumer_key	 = 'qiIpyK28ClWyWEBwL1WFWREzB'; //Your Consumer Key
 	// protected  $consumer_key	 = '9MwkTX36Chjt8GkDCgOoagdC8'; //Your Consumer Key 
 	// protected  $consumer_secret	 = 'AfDHm0kxdILjMHaHVPgc9Lb7MfRF4c1Kev6QRiwR2Bp1slUUXj'; 
-	protected  $consumer_secret	 = 'OZmLtsKQPc7EsFasn9zZZt8NvxWKkxtrsubz77Cbi2nPPGQE0L'; //Your Consumer Secret Key
+	protected  $consumer_secret	 = 'zjtydOrR7pWOmAyPa3QQ0GQP8XYmvW4DHrC4PO4yvqWk9ThPLe'; //Your Consumer Secret Key
 	// protected  $oauth_callback	 = 'http://demo.stepblogging.com/twitter-oauth/callback.php';
-	protected  $oauth_callback	 = 'http://ibidadmsdevwebfront.azurewebsites.net/index.php/omni/twitter/callback';
+	protected  $oauth_callback	 = 'http://stok.awanesia.com/index.php/omni/twitter/callback';
 	
 	function login_twitter($twitter_connect = ''){
 		if ($this->consumer_key === '' || $this->consumer_secret === '') {
