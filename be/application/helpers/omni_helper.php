@@ -25,8 +25,8 @@ function facebook()
 {
 	$ci =& get_instance();
 	require_once  APPPATH.'../omni/facebook/php-sdk-v4/src/Facebook/autoload.php';
-	$appid      = '1989410064664938';
-	$app_secret = 'e6c0c33647eb687c6bde7d65357de537'; 
+	$appid      = '179532339289827';
+	$app_secret = '73d6d164a7e2f8c4bed0ca97a63c4e86'; 
 	$fb = new Facebook\Facebook([
           'app_id'                => $appid, // Replace {app-id} with your app id
           'app_secret'            => $app_secret,
