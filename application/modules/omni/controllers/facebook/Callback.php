@@ -6,8 +6,8 @@ require_once  APPPATH.'../omni/facebook/php-sdk-v4/src/Facebook/autoload.php';
 
 Class Callback extends CI_Controller
 {
-	var $appid      = '1797631263599363';
-	var $app_secret = '4c4f11292235c85549f5d3eb5acadb3f'; 
+	var $appid      = '1989410064664938';
+	var $app_secret = 'e6c0c33647eb687c6bde7d65357de537'; 
 
 	public function index()
 	{ 
@@ -24,7 +24,7 @@ Class Callback extends CI_Controller
         // Trick below will avoid "Cross-site request forgery validation failed. Required param "state" missing." from Facebook
 		$_SESSION['FBRLH_state'] = @$_REQUEST['state']; 
 
-        print_r($this->session->all_userdata());
+        // print_r($this->session->all_userdata());
 
 		try {
 			$accessToken = $helper->getAccessToken();
