@@ -16,7 +16,7 @@
           </h1>
           <p> Senang bertemu denganmu lagi 
           </p>
-          <form action="<?php echo site_url('dashboard') ?>" class="login-form" method="post" id="">
+          <form action="<?php echo site_url('auth/login') ?>" class="login-form" method="post" id="">
 
             <div class="row">
               <div class="col-xs-12">
@@ -26,7 +26,7 @@
             <div class="row"> 
               <div class="col-xs-12">
                 <div class="input-group">
-                  <input type="password" placeholder="Kata Sandi" class="form-control pwd" value="" required>
+                  <input type="password" placeholder="Kata Sandi" class="form-control pwd" value="" required name="password">
                   <span class="input-group-btn" style="border-bottom: 1px solid  #a0a9b4"> 
                     <a href="#" class="icon-pass reveal">
                       <img src="<?php echo base_url('assets/img/icon/icon-hide_passwd.svg');?> " style="width: 20px !important;" id="fa-eye" alt="User Image">

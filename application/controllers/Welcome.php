@@ -25,4 +25,37 @@ class Welcome extends CI_Controller {
  		// echo "welcome";
 
 	}
+
+	public function test()
+	{
+		// $dataInsert =  array('test' => 'ahai');
+		// php
+		$json = file_get_contents('php://input');
+  		$dataInsert = json_decode($json, TRUE);
+
+  		// print_r($params);
+  		// exit();
+
+		$url = linkservice('stoksis') ."api/accounts/login/";
+		$method = 'POST';
+		$responseApi = ngeCurl($url, $json, $method);
+
+		print_r($responseApi);
+	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

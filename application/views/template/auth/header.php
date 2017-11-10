@@ -27,7 +27,7 @@
   <?php 
   $login = array('assets/js/jquery.min.js');
   $bukan = array('assets/js/jquery-1.10.2.js', 'assets/js/jquery.validate.min.js');
-  $jquery = ( (strtolower($this->uri->segment(2)) == 'login') or (strtolower($this->uri->segment(2)) == '') or (strtolower($this->uri->segment(2)) == 'signup') ) ? $login : $bukan ; 
+  $jquery = ( (strtolower($this->uri->segment(2)) == 'login') or (strtolower($this->uri->segment(2)) == '') or (strtolower($this->uri->segment(2)) == 'register') ) ? $login : $bukan ; 
 
   foreach ($jquery as $key) { 
     echo '<script src="'.base_url($key).'" type="text/javascript"></script>'; 
@@ -42,6 +42,9 @@
 
   <script src="<?php echo base_url('assets/js/sweetalert2.js')?> "></script>
   <script src="<?php echo base_url('assets/js/login.js')?> " type="text/javascript"></script>
+
+  <!-- alert sweet -->
+  <?php echo $this->session->flashdata('message'); ?>
 
   <!-- end  --> 
   <link rel="shortcut icon" href="" /> 

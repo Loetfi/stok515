@@ -10,30 +10,7 @@ class Auth extends CI_Controller {
 	 	$this->load->library('googleplus');
 	}
 
-	public function login()
-	{
-		$this->session->unset_userdata('OAUTH_ACCESS_TOKEN');
-		$this->session->unset_userdata('namefb');
-		$this->session->unset_userdata('emailfb');
-		$this->session->unset_userdata('tokenfb');
-		$this->session->unset_userdata('usernamefb');
-		$this->session->unset_userdata('emaillinkedin');
-		$this->session->unset_userdata('namelinkedin');
-		$this->session->unset_userdata('emailgoogle');
-		$this->session->unset_userdata('namegoogle');
-
-		$this->session->unset_userdata('namatwitter');
-		$this->session->unset_userdata('usernametwitter');
-		$this->session->unset_userdata('emailtwitter');
-		$this->session->unset_userdata('FBRLH_state');
-		
-		
-		// echo "login";
-		$data['title'] = 'Sign In Page';
-		$template = 'auth/login';
-		template_auth($template , $data);
-		
-	}
+	
 
 	public function forgot()
 	{
@@ -52,14 +29,7 @@ class Auth extends CI_Controller {
 		
 	}
 
-	public function signup()
-	{
-		// echo "login";
-		$data['title'] 	= 'Signup';
-		$template 		= 'auth/signup';
-		template_auth($template , $data);
-		
-	}
+	
 
 }
 

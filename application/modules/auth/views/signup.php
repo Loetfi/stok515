@@ -16,29 +16,35 @@
           </h1>
           <p> Kami akan membantumu 
           </p>
-          <form action="dashboard.html" class="login-form" method="post"> 
+          <form action="<?php echo site_url('auth/register') ?>" class="login-form" method="post"> 
             <div class="row">
               <div class="col-xs-6">
-                <input class="form-control form-control-solid placeholder-no-fix form-group" type="text" autocomplete="off" placeholder="Nama Depan" name="NamaDepan" required/> 
+                <input class="form-control form-control-solid placeholder-no-fix form-group" type="text" autocomplete="on" placeholder="Nama Depan" name="firstname" required/> 
               </div>
               <div class="col-xs-6">
-                <input class="form-control form-control-solid placeholder-no-fix form-group" type="text" autocomplete="off" placeholder="Nama Belakang" name="NamaBelakang" required/> 
+                <input class="form-control form-control-solid placeholder-no-fix form-group" type="text" autocomplete="off" placeholder="Nama Belakang" name="lastname" required/> 
               </div>
             </div>
             <div class="row">
               <div class="col-xs-12">
-                <input class="form-control form-control-solid placeholder-no-fix form-group" type="text" autocomplete="off" placeholder="Nomor Telepon" name="NomorTelepon" required/> 
+                <input class="form-control form-control-solid placeholder-no-fix form-group" type="text" autocomplete="off" placeholder="Nomor Teleposssn" name="no_handphone" required/> 
               </div>
             </div>
             <div class="row">
               <div class="col-xs-12">
-                <input class="form-control form-control-solid placeholder-no-fix form-group" type="text" autocomplete="off" placeholder="Email" name="NomorTelepon" required/> 
+                <input class="form-control form-control-solid placeholder-no-fix form-group" type="text" autocomplete="off" placeholder="Email" name="email" required/> 
               </div>
             </div>
+            <div class="row">
+              <div class="col-xs-12">
+                <input class="form-control form-control-solid placeholder-no-fix form-group" type="text" autocomplete="off" placeholder="Username" name="username" required/> 
+              </div>
+            </div>
+           
             <div class="row"> 
               <div class="col-xs-12">
                 <div class="input-group">
-                  <input type="password" placeholder="Kata Sandi" class="form-control pwd" value="" required>
+                  <input type="password" placeholder="Kata Sandi" class="form-control pwd" name="password" value="" required>
                   <span class="input-group-btn"  style="border-bottom: 1px solid  #a0a9b4">
                    <a href="#" class="icon-pass reveal">
                     <img src="<?php echo base_url('assets/img/icon/icon-hide_passwd.svg');?>" style="width: 20px !important;" id="fa-eye" alt="User Image">
@@ -51,7 +57,7 @@
           <div class="row"> 
             <div class="col-xs-12">
               <div class="input-group">
-                <input type="password" placeholder="Kata Sandi" class="form-control pwd2" value="" required>
+                <input type="password" placeholder="Kata Sandi" class="form-control pwd2" value="" name="confirm_password" required>
                 <span class="input-group-btn" style="border-bottom: 1px solid  #a0a9b4">
                   <a href="#" class="icon-pass reveal2">
                     <img src="<?php echo base_url('assets/img/icon/icon-hide_passwd.svg');?>" style="width: 20px !important;" id="fa-eye2" alt="User Image">
