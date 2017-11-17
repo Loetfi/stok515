@@ -35,7 +35,7 @@ class Twitter extends CI_Controller {
 
 
 			############################################################
-			$res = $this->proses(json_encode($this->input->post()));
+			$res = $this->proses(json_encode( ['email' => @$return->email] ));
 			$data = json_decode($res, TRUE);
 
 			if ($data['status'] === 200) { 
