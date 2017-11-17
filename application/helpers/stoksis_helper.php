@@ -1,5 +1,46 @@
 <?php 
 
+function isLogin()
+{
+	$ci =& get_instance();
+	$session = @$ci->session->userdata('userdata');
+	if (isset($session['email'])) {
+
+		// echo "oke";
+		// redirect('dashboard','refresh');
+		if ($ci->uri->segment(1) === strtolower('dashboard')) {
+		 	// return true;
+		 	// exit();
+		 } else {
+
+			$ci->session->set_flashdata('message', "<script type='text/javascript'> swal('Hai " .$session['firstname']. "', 'Kamu masih login', 'info'); </script>"); 
+
+			redirect('dashboard','refresh');
+		 	
+		 }
+
+	} else {
+
+		if ($ci->uri->segment(2) || $ci->uri->segment(1) === strtolower('login')) {
+		 	// return false;
+
+		 	// exit();
+		} else { 
+			
+			$ci->session->set_flashdata('message', "<script type='text/javascript'> swal('Hai Pengguna', 'Silahkan lakukan login', 'error'); </script>"); 
+			
+			redirect('auth/login','refresh');
+			
+		} 
+
+		
+
+		// redirect('auth/login','refresh');
+		// exit(); 
+	}
+}
+
+
 function ngeCurl($url, $dataArray = "", $method='GET' ){
 	$ci =& get_instance();
 	

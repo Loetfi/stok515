@@ -75,11 +75,17 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost:32768',
+	'hostname' => 'stok.awanesia.com',
 	'username' => 'root',
-	'password' => 'root',
-	'database' => 'stok515',
+	'password' => 'm0v3lo0t',
+	'database' => 'stoksis',
 	'dbdriver' => 'mysqli',
+
+	// 'hostname' => 'localhost:32768',
+	// 'username' => 'root',
+	// 'password' => 'root',
+	// 'database' => 'stok515',
+	// 'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
 	'db_debug' => (ENVIRONMENT !== 'production'),

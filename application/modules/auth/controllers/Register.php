@@ -8,6 +8,9 @@ class Register extends CI_Controller {
 		parent::__construct();
 		$this->load->helper('template');
 		$this->load->library('googleplus');
+
+		// check login 
+		isLogin();
 	} 
 
 	public function index()
@@ -21,14 +24,7 @@ class Register extends CI_Controller {
 
 			if ($data['status'] === 201) { 
 
-				$this->session->set_flashdata('message', "<script type='text/javascript'> swal('Good job!', '" . $data['message'] . "', 'success'); </script>");
-				// menambahkan untuk session
-				// $array = array(
-				// 	'userdata' => array_merge(@$data['data']['0'] , @$data['data']['1'])
-				// );
-				// $this->session->set_userdata( $array );
-
-				// print_r($this->session->all_userdata());
+				$this->session->set_flashdata('message', "<script type='text/javascript'> swal('Good job!', '" . $data['message'] . "', 'success'); </script>"); 
 				
 				redirect('auth/login','refresh');
 				exit();

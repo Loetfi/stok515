@@ -2,10 +2,9 @@
     <div class="container-fluid">
 
       <?php echo $this->session->flashdata('message'); ?>
-
-      
-
-
+      <!-- 
+        <?php print_r($this->session->all_userdata()); ?>
+       -->
       <div class="row">
         <div class="content-header">
           <h1>

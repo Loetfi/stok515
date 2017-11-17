@@ -19,25 +19,25 @@
           <form action="<?php echo site_url('auth/register') ?>" class="login-form" method="post"> 
             <div class="row">
               <div class="col-xs-6">
-                <input class="form-control form-control-solid placeholder-no-fix form-group" type="text" autocomplete="on" placeholder="Nama Depan" name="firstname" required/> 
+                <input class="form-control form-control-solid placeholder-no-fix form-group" type="text" autocomplete="on" placeholder="Nama Depan" name="firstname" value="<?php echo (@$this->input->post('firstname') ? $this->input->post('firstname') : '' ); ?>" required /> 
               </div>
               <div class="col-xs-6">
-                <input class="form-control form-control-solid placeholder-no-fix form-group" type="text" autocomplete="off" placeholder="Nama Belakang" name="lastname" required/> 
+                <input class="form-control form-control-solid placeholder-no-fix form-group" type="text" autocomplete="off" placeholder="Nama Belakang" name="lastname" value="<?php echo (@$this->input->post('lastname') ? $this->input->post('lastname') : '' ); ?>"  required/> 
               </div>
             </div>
             <div class="row">
               <div class="col-xs-12">
-                <input class="form-control form-control-solid placeholder-no-fix form-group" type="text" autocomplete="off" placeholder="Nomor Teleposssn" name="no_handphone" required/> 
+                <input class="form-control form-control-solid placeholder-no-fix form-group" type="text" autocomplete="off" placeholder="Nomor Telepon" name="no_handphone" value="<?php echo (@$this->input->post('no_handphone') ? $this->input->post('no_handphone') : '' ); ?>" required/> 
               </div>
             </div>
             <div class="row">
               <div class="col-xs-12">
-                <input class="form-control form-control-solid placeholder-no-fix form-group" type="text" autocomplete="off" placeholder="Email" name="email" required/> 
+                <input class="form-control form-control-solid placeholder-no-fix form-group" type="text" autocomplete="off" placeholder="Email" name="email" value="<?php echo (@$this->input->post('email') ? $this->input->post('email') : '' ); ?>" required/> 
               </div>
             </div>
             <div class="row">
               <div class="col-xs-12">
-                <input class="form-control form-control-solid placeholder-no-fix form-group" type="text" autocomplete="off" placeholder="Username" name="username" required/> 
+                <input class="form-control form-control-solid placeholder-no-fix form-group" type="text" autocomplete="off" placeholder="Username" name="username" value="<?php echo (@$this->input->post('username') ? $this->input->post('username') : '' ); ?>" required/> 
               </div>
             </div>
            

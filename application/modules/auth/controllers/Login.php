@@ -8,6 +8,9 @@ class Login extends CI_Controller {
 		parent::__construct();
 		$this->load->helper('template');
 		$this->load->library('googleplus');
+
+		// cek login
+		isLogin();
 	} 
 
 	public function index()
@@ -44,9 +47,7 @@ class Login extends CI_Controller {
 					'userdata' => array_merge(@$data['data']['0'] , @$data['data']['1'])
 				);
 				$this->session->set_userdata( $array );
-
-				// print_r($this->session->all_userdata());
-				
+ 
 				redirect('dashboard','refresh');
 				exit();
 			}  else {
