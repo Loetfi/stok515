@@ -24,7 +24,7 @@ Class Callback extends CI_Controller
         // Trick below will avoid "Cross-site request forgery validation failed. Required param "state" missing." from Facebook
 		$_SESSION['FBRLH_state'] = @$_REQUEST['state']; 
 
-        // print_r($this->session->all_userdata());
+        print_r($this->session->all_userdata());
 
 		try {
 			$accessToken = $helper->getAccessToken();

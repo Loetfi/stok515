@@ -2,10 +2,7 @@
 
 defined('BASEPATH') OR exit('No direct script access allowed'); 
 
-// meload omni facebook untuk keperluan access token
-
-
-
+// meload omni facebook untuk keperluan access token 
 function google()
 {
   $CI =& get_instance();
