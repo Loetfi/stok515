@@ -33,29 +33,6 @@ class Twitter extends CI_Controller {
 			);
 			$this->session->set_userdata( $array );
 
-
-			############################################################
-			$res = $this->proses(json_encode( ['email' => @$return->email] ));
-			$data = json_decode($res, TRUE);
-
-			print_r($data);
-			exit();
-
-			if ($data['status'] === 200) { 
-
-			$this->session->set_flashdata('message', "<script type='text/javascript'> swal('Good job!', '" . $data['message'] . "', 'success'); </script>");
-				// menambahkan untuk session
-				$array = array(
-					'userdata' => array_merge(@$data['data']['0'] , @$data['data']['1'])
-				);
-				$this->session->set_userdata( $array );
- 
-				redirect('dashboard','refresh');
-				exit();
-			}  else {
-				$this->session->set_flashdata('message', "<script type='text/javascript'> swal('Uuuh !', '" . $data['message'] . "', 'error'); </script>");
-			} 
-			##############################################################
 			
 			redirect('welcome','refresh');  
 
@@ -63,24 +40,7 @@ class Twitter extends CI_Controller {
 	}
 
 
-	public function proses($parameter = '')
-	{
-		// $this->output->set_content_type('application/json');
-		$parameter;
-		// exit();
-
-		// echo "berhasil";
-		// print_r($parameter);
-		// $json = file_get_contents('php://input');
-  		// $dataInsert = json_decode($json, TRUE); 
-
-		$url = linkservice('stoksis') ."api/accounts/loginSosmed/";
-		$method = 'POST';
-		$responseApi = ngeCurl($url, $parameter, $method);
-
-		return $responseApi;
-
-	}
+	
 
 }
 
