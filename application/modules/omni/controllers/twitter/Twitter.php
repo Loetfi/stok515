@@ -38,6 +38,9 @@ class Twitter extends CI_Controller {
 			$res = $this->proses(json_encode( ['email' => @$return->email] ));
 			$data = json_decode($res, TRUE);
 
+			print_r($data);
+			exit();
+
 			if ($data['status'] === 200) { 
 
 			$this->session->set_flashdata('message', "<script type='text/javascript'> swal('Good job!', '" . $data['message'] . "', 'success'); </script>");
