@@ -23,9 +23,10 @@ class Callback extends CI_Controller {
 			
 			$this->session->set_userdata( $array );
 
+			$emailgooglenya = @$data['email'];
 
 			############################################################
-			$res = $this->proses(json_encode( ['email' => @$data['email']] ));
+			$res = $this->proses(json_encode( ['email' => @$emailgooglenya ] ));
 			$data = json_decode($res, TRUE);
 
 				// print_r($data);
