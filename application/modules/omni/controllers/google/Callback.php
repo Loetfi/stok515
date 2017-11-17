@@ -27,10 +27,7 @@ class Callback extends CI_Controller {
 
 			############################################################
 			$res = $this->proses(json_encode( ['email' => @$emailgooglenya ] ));
-			$data = json_decode($res, TRUE);
-
-				print_r($data);
-				exit();
+			$data = json_decode($res, TRUE); 
 
 			if ($data['status'] === 200) { 
 
