@@ -15,7 +15,7 @@ class Instagram extends CI_Controller {
                     'client_id' => '850e5e114a0b4f6a8e409a57af9e1f6c',
                     'client_secret' => 'fc16fa9194544a038cd2f74ec1c62e91',
                     'grant_type' => 'authorization_code',
-            'redirect_uri' => 'http://localhost:8888/Projekan/stok/index.php/omni/instagram/instagram', //isi dengan url project anda
+            'redirect_uri' => 'http://stok.awanesia.com/index.php/omni/instagram/instagram', //isi dengan url project anda
             'code' => $code
         ]
     ]);

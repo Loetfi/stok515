@@ -74,12 +74,12 @@ $active_group = 'default';
 $query_builder = TRUE;
 
 $db['default'] = array(
-	'dsn'	=> '',
+	'dsn'	=> '', 
 	'hostname' => 'stok.awanesia.com',
 	'username' => 'root',
 	'password' => 'm0v3lo0t',
 	'database' => 'stoksis',
-	'dbdriver' => 'mysqli',
+	'dbdriver' => 'mysqli', 
 
 	// 'hostname' => 'localhost:32768',
 	// 'username' => 'root',

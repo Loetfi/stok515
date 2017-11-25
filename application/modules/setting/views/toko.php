@@ -1,3 +1,9 @@
+ <?php echo $this->session->flashdata('message'); ?>
+ 
+
+
+
+
  <div class="content">
   <div class="container-fluid">
     <div class="row">
@@ -24,188 +30,137 @@
       <div class="header"> 
         <div class="row"> 
           <div class="col-md-12">
-            <form class="form-inline pull-right">
+            <div class="pull-right">
+
+            <!-- <form class="form-inline ">
               <div class="form-group">
                 <label class="sr-only">Search
                 </label>
                 <input type="input" class="form-control bordered" placeholder="&#xf002; Cari Toko Disini">
               </div>
-              <a href="<?php echo site_url('setting/toko/add') ?>" class="btn btn-primary btn-fill"><img src="<?php echo base_url('assets/img/icon/plus-add_btn.svg');?>" class="icon-plus" alt="icon"> Tambah Toko
-              </a> 
-            </form>
+            </form> -->
+            <a href="<?php echo site_url('setting/toko/add') ?>" class="btn btn-primary btn-fill"><img src="<?php echo base_url('assets/img/icon/plus-add_btn.svg');?>" class="icon-plus" alt="icon"> Tambah Toko
+            </a> 
           </div>
         </div>
       </div>
-      <div class="content table-responsive table-full-width">
-        <table class="table">
-          <thead>
-            <th>
-            </th> 
-            <th>Nama Toko
-            </th>
-            <th>Tanggal Dibuat
-            </th>
-            <th>Jumlah Staff
-            </th>
-            <th>Jumlah Produk
-            </th>
-            <th>Saluran Penjualan
-            </th> 
-            <th>
-            </th> 
-          </thead>
-          <tbody class="text-center">
-            <tr> 
-              <td>
-                <img src="<?php echo base_url('assets/img/user.jpg');?>"/>
-              </td>
-              <td>XYZ Mega Store
-              </td>
-              <td>18 September 2017
-              </td>
-              <td>2
-              </td>
-              <td>6
-              </td>
-              <td>
-                <img class="social" src="<?php echo base_url('assets/img/icon/icon-ig.svg');?>"/>
-                <img class="social" src="<?php echo base_url('assets/img/icon/icon-fb.svg');?>"/>
-                <img class="social" src="<?php echo base_url('assets/img/icon/icon-twitter.svg');?>"/>
-                <img class="social" src="<?php echo base_url('assets/img/icon/logo-blibli.svg');?>"/>
-                <img class="social" src="<?php echo base_url('assets/img/icon/logo-bl.svg');?>"/>
-                <img class="social" src="<?php echo base_url('assets/img/icon/logo-tokped.svg');?>"/>
-              </td>   
-              <td class="td-actions text-right">
-                <a href="edittoko.html" class="font-30" rel="tooltip" title="Edit">
-                  <img src="<?php echo base_url('assets/img/icon/icon-edit.svg');?>" class="icon-edit" alt="icon">
-                </a>
-                <a href="#" class="font-30" rel="tooltip" title="Hapus" data-toggle="modal" data-target="#hapus">
-                  <img src="<?php echo base_url('assets/img/icon/icon-delete.svg');?>" class="icon-delete" alt="icon">
-                </a>   
-              </td>
-            </tr>
-            <tr> 
-              <td>
-                <img src="<?php echo base_url('assets/img/user.jpg');?>"/>
-              </td>
-              <td>XYZ Mega Store
-              </td>
+    </div>
+    <div class="content table-responsive table-full-width">   
 
-              <td>18 September 2017
-              </td>
-              <td>2
-              </td>
-              <td>6
-              </td>
-              <td>
-                <img class="social" src="<?php echo base_url('assets/img/icon/icon-ig.svg');?>"/>
-                <img class="social" src="<?php echo base_url('assets/img/icon/icon-fb.svg');?>"/>
-                <img class="social" src="<?php echo base_url('assets/img/icon/icon-twitter.svg');?>"/>
-                <img class="social" src="<?php echo base_url('assets/img/icon/logo-blibli.svg');?>"/>
-                <img class="social" src="<?php echo base_url('assets/img/icon/logo-bl.svg');?>"/>
-                <img class="social" src="<?php echo base_url('assets/img/icon/logo-tokped.svg');?>"/>
-              </td>   
-              <td class="td-actions text-right">
-                <a href="edittoko.html" class="font-30" rel="tooltip" title="Edit">
-                  <img src="<?php echo base_url('assets/img/icon/icon-edit.svg');?>" class="icon-edit" alt="icon">
-                </a>
-                <a href="#" class="font-30" rel="tooltip" title="Hapus" data-toggle="modal" data-target="#hapus">
-                  <img src="<?php echo base_url('assets/img/icon/icon-delete.svg');?>" class="icon-delete" alt="icon">
-                </a>   
-              </td>
-            </tr>
+      <table class="table table-hover " id="example" width="100%" cellspacing="0">
+        <thead>
+          <th>Foto
+          </th> 
+          <th>Nama Toko
+          </th>
+          <th>Tanggal Dibuat
+          </th>
+          <th>Jumlah Staff
+          </th>
+          <th>Jumlah Produk
+          </th>
+          <th>Saluran Penjualan
+          </th> 
+          <th>Aksi
+          </th> 
+        </thead>
+
+
+        <tbody class="text-center">
+          <?php foreach ($res['data'] as $r) { 
+      // foreach ($r['StoreAccess'] as $key) {
+      //  print_r($key);
+      // }
+            ?>
             <tr> 
               <td>
-                <img src="<?php echo base_url('assets/img/user.jpg');?>"/>
+                <img src="<?php echo $r['Photo']; ?>">
+                <!-- <img src="<?php echo base_url('assets/img/user.jpg');?>"/> -->
               </td>
-              <td>XYZ Mega Store
-              </td>
-              <td>18 September 2017
-              </td>
-              <td>2
-              </td>
-              <td>6
-              </td>
+              <td><?php echo $r['StoreName']; ?></td>
+              <td><?php echo date('d F Y' , strtotime($r['AddDate']));  ?></td>
+              <td><?php  echo count($r['StoreAccess']); ?> </td>
+              <td>belum</td>
               <td>
-                <img class="social" src="<?php echo base_url('assets/img/icon/icon-ig.svg');?>"/>
+                belum
+               <!--  <img class="social" src="<?php echo base_url('assets/img/icon/icon-ig.svg');?>"/>
                 <img class="social" src="<?php echo base_url('assets/img/icon/icon-fb.svg');?>"/>
                 <img class="social" src="<?php echo base_url('assets/img/icon/icon-twitter.svg');?>"/>
                 <img class="social" src="<?php echo base_url('assets/img/icon/logo-blibli.svg');?>"/>
                 <img class="social" src="<?php echo base_url('assets/img/icon/logo-bl.svg');?>"/>
-                <img class="social" src="<?php echo base_url('assets/img/icon/logo-tokped.svg');?>"/>
+                <img class="social" src="<?php echo base_url('assets/img/icon/logo-tokped.svg');?>"/> -->
               </td>   
               <td class="td-actions text-right">
-                <a href="edittoko.html" class="font-30" rel="tooltip" title="Edit">
+                <a href="<?php echo site_url('setting/toko/edit') ?>" class="font-30" rel="tooltip" title="Edit">
                   <img src="<?php echo base_url('assets/img/icon/icon-edit.svg');?>" class="icon-edit" alt="icon">
                 </a>
-                <a href="#" class="font-30" rel="tooltip" title="Hapus" data-toggle="modal" data-target="#hapus">
+                <a href="#" class="font-30" rel="tooltip" title="Hapus" data-href="<?=site_url('setting/toko/delete?id=').$r['StoreId'];?>" data-toggle="modal" data-target="#confirm-delete"> 
                   <img src="<?php echo base_url('assets/img/icon/icon-delete.svg');?>" class="icon-delete" alt="icon">
                 </a>   
               </td>
             </tr>
+            <?php } ?>
           </tbody>
-        </table>
-        <div class="row">
-          <div class="col-md-12">
-            <ul class="pagination pull-right">
-              <li>
-                <a href="#">«
-                </a>
-              </li>
-              <li class="active">
-                <a href="#">1
-                </a>
-              </li>
-              <li>
-                <a href="#">2
-                </a>
-              </li>
-              <li>
-                <a href="#">3
-                </a>
-              </li>
-              <li>
-                <a href="#">4
-                </a>
-              </li>
-              <li>
-                <a href="#">5
-                </a>
-              </li>
-              <li>
-                <a href="#">»
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div> 
-    </div>
-  </div>
-</div>
-</div>
-</div>
-<div class="modal brandmodal fade" id="hapus" tabindex="-1" role="dialog" aria-labelledby="">
-  <div class="modal-dialog" role="document" style="width: 28%;">
-    <div class="modal-content">
-      <div class="modal-header">
-        <a type="button" class="boxclose" data-dismiss="modal">
-        </a>  
-        <h4 class="modal-title m-t-40 font-thin">
-          Hapus Toko
-        </h4>
-      </div>
-      <div class="modal-body" style="padding-right: 50px;padding-left: 50px;">
-        <h6 class="text-center m-10 m-b-30">Apakah anda yakin untuk menghapus toko ini?
-        </h6>
-        <div class="form-group m-b-15">
-          <button id="signupSubmit" type="submit" data-dismiss="modal" class="btn btn-danger btn-fill">Batal
-          </button>
-          <button id="signupSubmit" type="submit" data-dismiss="modal" class="btn btn-info btn-fill">Ya
-          </button>
+          
+            <!-- echo count($r['StoreAccess']);
+            echo $r['StoreId'];
+            echo $r['StoreName'];
+            echo $r['StoreAddress'];
+            echo $r['Latitude'];
+            echo $r['Longitude'];
+            echo $r['Photo'];
+            echo date('d F Y' , strtotime($r['AddDate'])); -->
+            <!-- echo "<br>"; --> 
+
+          </table> 
         </div> 
-      </div> 
+      </div>
     </div>
   </div>
 </div>
+</div>
+
+<div class="modal fade" id="confirm-delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title m-t-40 font-thin">Hapus Toko</h4>
+      </div>
+
+      <div class="modal-body">
+        <h6 class="text-center m-10 m-b-30">Apakah anda yakin untuk menghapus toko ini?</h6>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger btn-fill" data-dismiss="modal">Cancel</button>
+        <a class="btn btn-info btn-ok btn-fill">Delete</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+  $('#confirm-delete').on('show.bs.modal', function(e) {
+    $(this).find('.btn-ok').attr('href', $(e.relatedTarget).data('href'));
+
+    $('.debug-url').html('Delete URL: <strong>' + $(this).find('.btn-ok').attr('href') + '</strong>');
+  });
+</script>  
 </body>
+
+
+
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('#example').DataTable({
+              "order": [[ 2, "desc" ]]
+    });
+  } );
+</script>
+
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script>
+
