@@ -58,34 +58,41 @@
               </th> 
             </thead>
             <tbody class="text-center">
-              <tr> 
-                <td>
-                  <img src="<?php echo base_url('assets/img/user.jpg');?>"/>
-                </td>
-                <td>Apple iPhone 7 Plus...
-                </td>
-                <td>SKU XXX-01-FF...
-                </td>
-                <td>Elekronik
-                </td>
-                <td>6
-                </td>
-                <td>IDR 600.000
-                </td>
-                <td>IDR 200.000
-                </td>
-                <td class="td-actions text-right">
-                  <a href="#" class="font-30" rel="tooltip" title="Lihat" data-toggle="modal" data-target="#lihatProduk">
-                    <img src="<?php echo base_url('assets/img/icon/icon-viewdetails.svg');?>" class="icon-view" alt="icon">
-                  </a>
-                  <a href="<?php echo site_url('produk/editproduk/') ?>" class="font-30" rel="tooltip" title="Edit">
-                    <img src="<?php echo base_url('assets/img/icon/icon-edit.svg');?>" class="icon-edit" alt="icon">
-                  </a>
-                  <a href="#" class="font-30" rel="tooltip" title="Hapus" data-toggle="modal" data-target="#hapusproduk">
-                    <img src="<?php echo base_url('assets/img/icon/icon-delete.svg');?>" class="icon-delete" alt="icon">
-                  </a>   
-                </td>
-              </tr>
+              <?php if (isset($produk)) {
+                foreach ($produk as $prod) { ?>
+                <tr> 
+                  <td>
+                    <?php 
+                  //print_r($prod['ProductsImage']);
+                    if (isset($prod['ProductsImage'][0]['path'])) {
+                      echo  '<img src="'.$prod['ProductsImage'][0]['path'].'"/>';
+                    } else {
+                      echo '<img src="'.base_url('assets/img/user.jpg').'"/>';
+                    }
+                    ?>
+                    
+                  </td>
+                  <td><?php echo $prod['product_name']; ?></td>
+                  <td>SKU XXX-01-FF...</td>
+                  <td>Elekronik</td>
+                  <td>6</td>
+                  <td>IDR 600.000</td>
+                  <td>IDR 200.000</td>
+                  <td class="td-actions text-right">
+                    <a href="#" class="font-30" rel="tooltip" title="Lihat" data-toggle="modal" data-target="#lihatProduk">
+                      <img src="<?php echo base_url('assets/img/icon/icon-viewdetails.svg');?>" class="icon-view" alt="icon">
+                    </a>
+                    <a href="<?php echo site_url('produk/editproduk/') ?>" class="font-30" rel="tooltip" title="Edit">
+                      <img src="<?php echo base_url('assets/img/icon/icon-edit.svg');?>" class="icon-edit" alt="icon">
+                    </a>
+                    <a href="#" class="font-30" rel="tooltip" title="Hapus" data-toggle="modal" data-target="#hapusproduk">
+                      <img src="<?php echo base_url('assets/img/icon/icon-delete.svg');?>" class="icon-delete" alt="icon">
+                    </a>   
+                  </td>
+                </tr>
+                <?php }} ?>
+
+              <!-- 
               <tr> 
                 <td>
                   <img src="<?php echo base_url('assets/img/user.jpg');?>"/>
@@ -141,7 +148,7 @@
                     <img src="<?php echo base_url('assets/img/icon/icon-delete.svg');?>" class="icon-delete" alt="icon">
                   </a>   
                 </td>
-              </tr> 
+              </tr>  -->
             </tbody>
           </table>
           <div class="row">
@@ -241,13 +248,13 @@
                         - 128GB
                       </dd> 
                       <dt class="font-12 font-thin" style="width: 80px;">
-                        
+
                       </dt> 
                       <dd class="font-14 color-grey-light font-thin">
                        - Warna Matte Black
                      </dd>
                      <dt class="font-12 font-thin" style="width: 80px;">
-                      
+
                      </dt> 
                      <dd class="font-14 color-grey-light font-thin">
                        - Garansi International 1 Tahun

@@ -16,6 +16,7 @@ class Toko extends CI_Controller {
 		template($template , $data);	
 	}
 
+
 	public function index()
 	{
 
@@ -31,7 +32,7 @@ class Toko extends CI_Controller {
 		// print_r( $this->session->all_userdata() );
 		// exit();
 		@$parameter;
-		$url = 'http://stoksis-store-services.azurewebsites.net/api/storebyuser?userId='.@$sesi['id'];//linkservice('stoksis') ."api/accounts/login/";
+		$url = linkservice('store').'api/storebyuser?userId='.@$sesi['id'];//linkservice('stoksis') ."api/accounts/login/";
 		$method = 'GET';
 		$responseApi = ngeCurl($url, '', $method);
 		$res = json_decode($responseApi,true);
@@ -91,13 +92,6 @@ class Toko extends CI_Controller {
 		// print_r(expression)
 
 
-		$config['upload_path'] = './uploads/';
-		$config['allowed_types'] = 'gif|jpg|png';
-		$config['max_size']  = '100';
-		$config['max_width']  = '1024';
-		$config['max_height']  = '768';
-
-		$this->load->library('upload', $config);
 
 
 		// $data = array('upload_data' => $this->upload->data());
@@ -130,7 +124,16 @@ class Toko extends CI_Controller {
 
 		// echo "<img src'".$decode."'>";
 		// exit();
- 
+
+
+
+		$config['upload_path'] = './uploads/';
+		$config['allowed_types'] = 'gif|jpg|png';
+		$config['max_size']  = '100';
+		$config['max_width']  = '1024';
+		$config['max_height']  = '768';
+
+		$this->load->library('upload', $config);
 
 		if ( ! $this->upload->do_upload()){
 
@@ -200,8 +203,62 @@ class Toko extends CI_Controller {
 	}
 
 
-	public function edit()
+	public function edit($storeId = '')
 	{
+		// echo "<pre>";	
+		$userdata  = $this->session->userdata('userdata');
+		$jwt = $userdata['token']; 
+		$url = linkservice('store') ."api/storebyid?storeId=".$storeId;
+		$method = 'GET';
+		$responseApi = ngeCurl($url, '', $method , $jwt);
+		$res = json_decode($responseApi,true);
+
+		/*
+		(
+            [0] => Array
+                (
+                    [StoreAccess] => Array
+                        (
+                        )
+
+                    [StoreInfo] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [StoreInfoId] => ae2dfe11-3508-4dd1-9752-3eadeedd53c9
+                                    [StoreId] => 19c96550-2455-4736-8f5c-dc30e3bc0e69
+                                    [StoreInfoType] => string
+                                    [StoreInfoSocialId] => string
+                                    [Email] => pevita@gmail.com
+                                    [AddBy] => 70
+                                    [AddDate] => 2017-11-26T05:29:33
+                                    [ModBy] => 
+                                    [ModDate] => 
+                                    [Deleted] => 
+                                )
+
+                        )
+
+                    [StoreId] => 19c96550-2455-4736-8f5c-dc30e3bc0e69
+                    [StoreName] => Pevocake
+                    [StoreAddress] => Bandung
+                    [Latitude] => -6.208991631564475
+                    [Longitude] => 106.9661979668308
+                    [Photo] => https://stoksisdev.blob.core.windows.net/store/5263f98c-c24e-4403-8501-8b768ff242d1
+                    [AddBy] => 70
+                    [AddDate] => 2017-11-26T05:29:33
+                    [ModBy] => 
+                    [ModDate] => 
+                    [Deleted] => 
+                )
+
+        )
+        */
+
+
+		// print_r($res);
+		// exit();
+		// http://stoksis-store-services.azurewebsites.net/api/storebyid?storeId=2222
 		$data['title'] = 'Atur Toko';
 		$template = 'setting/edittoko';
 

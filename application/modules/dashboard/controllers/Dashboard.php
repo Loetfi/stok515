@@ -13,6 +13,20 @@ class Dashboard extends CI_Controller {
 
 	public function index()
 	{
+		$sesi = $this->session->userdata('userdata');
+		// exit();
+
+		#### get count store
+		$userdata  = $this->session->userdata('userdata');
+		$jwt = $userdata['token']; 
+		@$parameter;
+		$url = linkservice('store') ."api/storebyuser?userId=".@$sesi['id'];
+		$method = 'GET';
+		$responseApi = ngeCurl($url, '', $method, $jwt);
+		$res = json_decode($responseApi,true);
+		$data['storecount'] = count($res['data']);
+		######### get end count store
+
 		$template = 'dashboard/dashboard';
 		$data['title'] = 'Dashboard';
 		template($template, $data);		

@@ -30,7 +30,7 @@
               <img src="<?php echo base_url('assets/img/icon/icon-toko.svg');?>" class="" alt="icon">
             </div>
             <div class="value color-grey">
-              <h1 class="count">6
+              <h1 class="count"><?php echo @$storecount; ?>
               </h1>
               <p>Store
               </p>

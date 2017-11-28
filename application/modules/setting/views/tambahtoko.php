@@ -1,17 +1,23 @@
+<script type="text/javascript">
+  $(function(){
+    $('#namatoko').keyup(function(){
+      displayAll();
+    });
+    $('#namatoko').keyup(function(){
+      displayAll();
+    });
+
+    function displayAll(){
+      thisVal = $('#namatoko').val();
+      $('#displaynamatoko').html(thisVal);
+    }
+  });
+</script> 
+
  <div class="content">
-
-       <!--  
-         
-        
-        <script type="text/javascript" src="map.js"></script>
-    </body>
-    </html> -->
-
     <div class="container-fluid">
       <div class="row">
         <div class="content-header">
-
-
           <h1>
             Pengaturan
             <a href="#" class="btn btn-success btn-fill pull-right">Fitur Premium
@@ -340,6 +346,9 @@
 
 
 <script type="text/javascript">
+
+  // copy value
+
 
 
   //map.js

@@ -95,7 +95,7 @@ function ngeCurl($url, $dataArray = "", $method='GET' , $jwt = '' ){
 function linkservice($services)
 { 
 	$STOKSIS = ('STOKSIS' == strtoupper($services)) ? $return = 'http://stoksis-api.azurewebsites.net/' : ''; 
-
+	$CATEGORY = ('CATEGORY' == strtoupper($services)) ? $return = 'http://stoksis-category-services.azurewebsites.net/' : ''; 
 	$STORE = ('STORE' == strtoupper($services)) ? $return = 'http://stoksis-store-services.azurewebsites.net/' : '';
 	
 	return $return;

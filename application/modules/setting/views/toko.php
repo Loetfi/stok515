@@ -1,9 +1,5 @@
  <?php echo $this->session->flashdata('message'); ?>
- 
-
-
-
-
+  
  <div class="content">
   <div class="container-fluid">
     <div class="row">
@@ -91,7 +87,7 @@
                 <img class="social" src="<?php echo base_url('assets/img/icon/logo-tokped.svg');?>"/> -->
               </td>   
               <td class="td-actions text-right">
-                <a href="<?php echo site_url('setting/toko/edit') ?>" class="font-30" rel="tooltip" title="Edit">
+                <a href="<?php echo site_url('setting/toko/edit/'.$r['StoreId']) ?>" class="font-30" rel="tooltip" title="Edit">
                   <img src="<?php echo base_url('assets/img/icon/icon-edit.svg');?>" class="icon-edit" alt="icon">
                 </a>
                 <a href="#" class="font-30" rel="tooltip" title="Hapus" data-href="<?=site_url('setting/toko/delete?id=').$r['StoreId'];?>" data-toggle="modal" data-target="#confirm-delete"> 
