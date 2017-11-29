@@ -33,27 +33,36 @@
               </h4> 
             </div>
             <br>
-            <form id="" action="#" method="" novalidate="">
+            <form id="" action="<?php echo site_url('setting/tim/addassign') ?>" method="POST" target="_blank">
+              <?php $this->load->view('asignmodalstaff'); ?>
+
               <div class="row">
                 <div class="text-center">
                   <div class="author">
-                   <img class="avatar-toko border-gray" src="<?php echo base_url('assets/img/icon/icon-basictim.svg');?>" alt=".Profile Tim Avatar">
-                   <a href="#"> 
-                    <h4 class="title font-thin font-16" style="line-height: 20px;">Zola Zoli
-                      <br>
-                      <small class="font-12 color-black">Owner
-                      </small>
-                    </h4>
-                  </a>
-                </div>
-                <br>
-                <div class="col-md-4 col-md-offset-4">
+                    
+                    <img class="avatar-toko border-gray" src="<?php echo base_url('assets/img/icon/icon-basictim.svg');?>" alt=".Profile Tim Avatar">
+                    <a href="#"> 
+                      <h4 class="title font-thin font-16" style="line-height: 20px;"><?=$nama;?>
+                        <br>
+                        <small class="font-12 color-black"><?php echo $status;?>
+                        </small>
+                      </h4>
+                    </a>
+                  </div>
+                  <br>
+                  <div class="col-md-4 col-md-offset-4">
+
+                   <!--  <a href="" class="color-grey-light button-edit-tim" data-toggle="modal" data-target="#tempatkantoko"> 
+                      <img src="<?php echo base_url('assets/img/icon/plus.svg');?>" class="icon-edit" alt="icon"> Tempatkan Pada Toko 
+                    </a> 
+                  -->
+
                   <img class="" src="<?php echo base_url('assets/img/icon/icon-daftartoko.svg');?>" alt="Gambar daftar toko" style="width: 43px;">
-                  <a href="" class="color-black" data-toggle="modal" data-target="#assigntim">
+                  <a href="" class="color-black" data-toggle="modal" data-target="#tempatkantoko">
                     <img class="" src="<?php echo base_url('assets/img/icon/plus.svg');?>" alt="..." style="width: 33px">
                   </a>
                   <br>
-                  <a href="" class="font-12" data-toggle="modal" data-target="#assigntim" style="color: #9A9A9A;">Tempatkan Pada Toko
+                  <a href="" class="font-12" data-toggle="modal" data-target="#tempatkantoko" style="color: #9A9A9A;">Tempatkan Pada Toko
                   </a>
                 </div>
               </div>
@@ -63,7 +72,8 @@
               <div class="text-center">
                 <div class="footer">  
                   <a href="<?php echo site_url('setting/tim/add') ?>" class="btn btn-warning btn-wd">SEBELUMYA</a> 
-                  <a href="<?php echo site_url('setting/tim/addsummary') ?>" class="btn btn-warning btn-wd btn-fill">BERIKUTNYA</a> 
+                  <!-- <a href="<?php echo site_url('setting/tim/addsummary') ?>" class="btn btn-warning btn-wd btn-fill">BERIKUTNYA</a>   -->
+                  <button class="btn btn-warning btn-fill">BERIKUTNYA</button>
                   <div class="clearfix">
                   </div>
                 </div>
@@ -230,8 +240,11 @@
 </div>
 </body>
 
- <script type="text/javascript">
-    function onFinishTim(){
+
+
+
+<script type="text/javascript">
+  function onFinishTim(){
       //here you can do something, sent the form to server via ajax and show a success message with swal
       swal("Sukses", "Anda sukses menambahkan tim baru", "success");
     }
@@ -240,25 +253,25 @@
     $().ready(function(){
       $('#tambahIdentitasToko').validate();
     }
-             );
+    );
   </script>
   <script>
     $('input[id=base-input]').change(function() {
       $('#fake-input').val($(this).val().replace("C:\\fakepath\\", ""));
     }
-                                    );
+    );
     <!--==================Javascript code for custom input type file on button ================-->
-      $('input[id=main-input]').change(function() {
-        console.log($(this).val());
-        var mainValue = $(this).val();
-        if(mainValue == ""){
-          document.getElementById("fake-btn").innerHTML = "Choose File";
-        }
-        else{
-          document.getElementById("fake-btn").innerHTML = mainValue.replace("C:\\fakepath\\", "");
-        }
+    $('input[id=main-input]').change(function() {
+      console.log($(this).val());
+      var mainValue = $(this).val();
+      if(mainValue == ""){
+        document.getElementById("fake-btn").innerHTML = "Choose File";
       }
-                                      );
+      else{
+        document.getElementById("fake-btn").innerHTML = mainValue.replace("C:\\fakepath\\", "");
+      }
+    }
+    );
     <!--=========================input type file change on button ends here====================-->
       //    ===================== snippet for profile picture change ============================ //
       function readURL(input) {
@@ -266,9 +279,9 @@
           var reader = new FileReader();
           reader.onload = function (e) {
             $('.imgCircle')
-              .attr('src', e.target.result)
-              .width(114)
-              .height(114);
+            .attr('src', e.target.result)
+            .width(114)
+            .height(114);
           };
           reader.readAsDataURL(input.files[0]);
         }
@@ -285,5 +298,5 @@
         $pwd.attr('type', 'password');
       }
     }
-                   );
+    );
   </script>

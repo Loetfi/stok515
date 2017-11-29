@@ -20,7 +20,10 @@
         <ul class="nav navbar-nav navbar-right">
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <img src="<?php echo base_url('assets/img/icon/icon-profil.svg');?>" class="user-image" alt="User Image"> Nama Akun
+              <img src="<?php echo base_url('assets/img/icon/icon-profil.svg');?>" class="user-image" alt="User Image"> 
+
+              <?php $userdata = $this->session->userdata('userdata');
+              echo substr($userdata['firstname'].' '.$userdata['lastname'], 0,10); ?>
               <img src="<?php echo base_url('assets/img/icon/icon-drop_small.svg');?>" class="icon-drop-small" alt="User Image">
             </a>
             <ul class="dropdown-menu">

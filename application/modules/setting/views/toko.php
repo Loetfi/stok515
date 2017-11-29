@@ -1,5 +1,6 @@
  <?php echo $this->session->flashdata('message'); ?>
   
+  
  <div class="content">
   <div class="container-fluid">
     <div class="row">
@@ -63,6 +64,7 @@
 
 
         <tbody class="text-center">
+
           <?php foreach ($res['data'] as $r) { 
       // foreach ($r['StoreAccess'] as $key) {
       //  print_r($key);

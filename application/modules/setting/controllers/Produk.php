@@ -92,7 +92,7 @@ class Produk extends CI_Controller {
 		}
 		*/
 
-		
+		$userdata = $this->session->userdata('userdata');
 
 		if ($_POST) {
 
@@ -182,7 +182,7 @@ class Produk extends CI_Controller {
 
 			// print_r($Insert);
 			// echo json_encode($Insert);
-			$userdata = $this->session->userdata('userdata');
+			
 			$jwt = $userdata['token']; 
 			@$parameter = $Insert;
 
@@ -195,8 +195,8 @@ class Produk extends CI_Controller {
 			$responseApi = ngeCurl($url, json_encode($parameter), $method , $jwt);
 			$res = json_decode($responseApi,true);
 
-			print_r($res);
-			exit();
+			// print_r($res);
+			// exit();
 
 			// print_r($res);
 			// echo json_encode($parameter);
@@ -211,8 +211,7 @@ class Produk extends CI_Controller {
 				$this->session->set_flashdata('message', "<script type='text/javascript'> swal('Uuuh !', '" . $res['message'] . "', 'error'); </script>");
 
 				redirect('setting/toko','refresh');
-			}  
-			exit();
+			}   
 			/*
 			$data = array(
 				'id'      => $sesi['id'],
@@ -249,13 +248,16 @@ class Produk extends CI_Controller {
 			*/
 		}
 
-		
-		$url = linkservice('store').'api/storebyuser?userId='.@$sesi['id'];//linkservice('stoksis') ."api/accounts/login/";
+		// print_r($userdata);
+		$url = linkservice('store').'api/storebyuser?userId='.@$userdata['id'];//linkservice('stoksis') ."api/accounts/login/";
 		$method = 'GET';
 		$responseApi = ngeCurl($url, '', $method);
 		$res = json_decode($responseApi,true);
 
 		$data['store'] = $res['data'];
+
+		// print_r($res); 
+		// exit();
 		// print_r($res['data']);
 		// exit();
 

@@ -33,7 +33,7 @@
             </h4> 
           </div>
           <br>
-          <form id="" action="#" method="" novalidate="">
+          <form id="" action="<?php echo site_url('setting/tim/add') ?>" method="POST" target="_blank">
             <div class="row">
               <div class="col-md-4 col-md-offset-4">
                 <div class="text-center bg-form">
@@ -46,27 +46,23 @@
                       <input type="checkbox" class="form-control" id="checker">
                     </div>
                   </div>
-                  <input type="file" id="image-input" onchange="readURL(this);" accept="image/*"  class="form-control form-input Profile-input-file" >
+                  <input type="file" id="image-input" onchange="readURL(this);" accept="image/*"  class="form-control form-input Profile-input-file" name="userfile" >
                 </div>
               </div>
             </div>
             <div class="row">
               <div class="col-md-4 col-md-offset-4">
                 <div class="form-group"> 
-                  <input class="form-control" type="text" name="namatoko" placeholder="username" required="true">
+                  <input class="form-control" type="text" name="username" placeholder="username" required="true">
                 </div>
               </div>
             </div> 
             <div class="row">
               <div class="col-md-4 col-md-offset-4">
                 <div class="form-group"> 
-                  <select class="selectpicker form-control">
-                    <option selected="" disabled="" style="font-size: 11px;">- Level Akses -
-                    </option>
-                    <option style="font-size: 11px;">Admin
-                    </option>
-                    <option style="font-size: 11px;">Superuser
-                    </option>
+                  <select class="selectpicker form-control" name="akses">
+                    <option style="font-size: 11px;" value="true">Owner</option>
+                    <option style="font-size: 11px;" value="false">Staff</option>
                   </select> 
                 </div>
               </div>
@@ -74,21 +70,22 @@
             <div class="row"> 
               <div class="col-md-4 col-md-offset-4">
                 <div class="form-group">
-                  <input class="form-control" type="text" name="namalengkap" required="true" placeholder="Nama Lengkap">
+                  <input class="form-control" type="text" name="firstname" required="true" placeholder="Nama Depan">
+                  <input class="form-control" type="text" name="lastname" required="true" placeholder="Nama Belakang">
                 </div>
               </div> 
             </div>
             <div class="row"> 
               <div class="col-md-4 col-md-offset-4">
                 <div class="form-group">
-                  <input class="form-control" type="text" name="email" required="true" placeholder="Email">
+                  <input class="form-control" type="email" name="email" required placeholder="Email">
                 </div>
               </div> 
             </div>
             <div class="row"> 
               <div class="col-md-4 col-md-offset-4">
                 <div class="input-group" style="width:100%;">
-                  <input type="password" placeholder="Kata Sandi" class="form-control pwd" value="" required>
+                  <input type="password" placeholder="Kata Sandi" class="form-control pwd" value="" required name="password">
                   <span class="input-group-btn" style="border-bottom: 1px solid  #a0a9b4"> 
                     <a href="#" class="icon-pass reveal pass" style="left: 5px;background-color: transparent;">
                       <img src="<?php echo base_url('assets/img/icon/icon-hide_passwd.svg');?>" style="width: 20px !important;" id="fa-eye" alt="User Image">
@@ -101,7 +98,7 @@
             <div class="row"> 
               <div class="col-md-4 col-md-offset-4">
                 <div class="input-group" style="width:100%;">
-                  <input type="password" placeholder="Ulangi Kata Sandi" class="form-control pwd2" value="" required>
+                  <input type="password" placeholder="Ulangi Kata Sandi" class="form-control pwd2" value="" required name="confirm_password">
                   <span class="input-group-btn" style="border-bottom: 1px solid  #a0a9b4"> 
                     <a href="#" class="icon-pass reveal2 pass" style="left: 5px;background-color: transparent;">
                       <img src="<?php echo base_url('assets/img/icon/icon-hide_passwd.svg');?>" style="width: 20px !important;" id="fa-eye2" alt="User Image">
@@ -121,6 +118,7 @@
                 </div>
               </div>
             </div>
+            <button class="btn btn-primary">submit</button>
           </form>
         </div>
       </div>
@@ -129,81 +127,9 @@
 </div>
 </div>
 </div>
-<div class="modal brandmodal fade" id="saluranOnline" tabindex="-1" role="dialog" aria-labelledby="">
-  <div class="modal-dialog" role="document" style="width: 28%;">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">×
-        </button>
-        <h4 class="modal-title">
-          <img src="<?php echo base_url('assets/img/social/instagram-logo.svg');?>" class="modal-logo"> Sign In to Blibli
-        </h4>
-      </div>
-      <div class="modal-body">
-        <form class="" id="" role="form" method="POST" action="">
-          <div class="form-group"> 
-            <input id="signupEmail" type="email" required="" maxlength="50" class="form-control" placeholder="Masukkan Username/Email Anda">
-          </div> 
-          <div class="form-group"> 
-            <input id="signupPassword" required="" type="password" maxlength="25" class="form-control" placeholder="Masukkkan Password Anda" length="40">
-          </div>
-          <div class="form-group">
-            <button id="signupSubmit" type="submit" class="btn btn-info btn-fill btn-block">Login
-            </button>
-          </div> 
-          <br>
-        </form>
-      </div> 
-    </div>
-  </div>
-</div>
-<div class="modal brandmodal fade" id="saluranOffline" tabindex="-1" role="dialog" aria-labelledby="">
-  <div class="modal-dialog" role="document" style="width: 28%;">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">×
-        </button> 
-        <h4 class="modal-title">
-          <img src="<?php echo base_url('assets/img/social/instagram-logo.svg');?>" class="modal-logo">
-        </h4>
-      </div>
-      <div class="modal-body p-t-0"> 
-        <h4 class="text-center m-t-0"> 
-          Instagram
-        </h4>
-        <p class="text-center color-blue">Tambahkan Instagram sebagai salah satu saluran penjualan secara offline
-        </p>
-        <div class="form-group">
-          <button id="signupSubmit" type="submit" class="btn btn-success btn-fill btn-block">Tambahkan
-          </button>
-        </div>
-      </div> 
-    </div>
-  </div>
-</div>
-<div class="modal brandmodal fade" id="Unlink" tabindex="-1" role="dialog" aria-labelledby="">
-  <div class="modal-dialog" role="document" style="width: 28%;">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">×
-        </button> 
-        <h4 class="modal-title">
-          <img src="<?php echo base_url('assets/img/social/tokopedia-logo.svg');?>" class="modal-logo">
-        </h4>
-      </div>
-      <div class="modal-body p-t-0"> 
-        <h6 class="text-center m-10">Terhubung sebagai XYZ Mega Store
-        </h6>
-        <p class="text-center color-blue">Putuskan Tokopedia sebagai salah satu saluran penjualan online
-        </p>
-        <div class="form-group">
-          <button id="signupSubmit" type="submit" class="btn btn-danger btn-fill btn-block">Putuskan
-          </button>
-        </div>
-      </div> 
-    </div>
-  </div>
-</div>
+
+
+
 <div class="modal brandmodal fade" id="alamattoko" tabindex="-1" role="dialog" aria-labelledby="">
   <div class="modal-dialog modal-lg" role="document" >
     <div class="modal-content">

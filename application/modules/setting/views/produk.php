@@ -1,3 +1,5 @@
+  <!-- <?php print_r($produk);?> -->
+<?php echo $this->session->flashdata('message'); ?>
   <div class="content">
     <div class="container-fluid">
       <div class="row">
@@ -79,10 +81,10 @@
                   <td>IDR 600.000</td>
                   <td>IDR 200.000</td>
                   <td class="td-actions text-right">
-                    <a href="#" class="font-30" rel="tooltip" title="Lihat" data-toggle="modal" data-target="#lihatProduk">
+                    <a href="<?php echo base_url('setting/produk/view/'.$prod['id']); ?>" class="font-30" rel="tooltip" title="Lihat">
                       <img src="<?php echo base_url('assets/img/icon/icon-viewdetails.svg');?>" class="icon-view" alt="icon">
                     </a>
-                    <a href="<?php echo site_url('produk/editproduk/') ?>" class="font-30" rel="tooltip" title="Edit">
+                    <a href="<?php echo site_url('produk/editproduk/'.$prod['id']) ?>" class="font-30" rel="tooltip" title="Edit">
                       <img src="<?php echo base_url('assets/img/icon/icon-edit.svg');?>" class="icon-edit" alt="icon">
                     </a>
                     <a href="#" class="font-30" rel="tooltip" title="Hapus" data-toggle="modal" data-target="#hapusproduk">
