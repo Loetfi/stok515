@@ -139,6 +139,7 @@ class Toko extends CI_Controller {
 
 			echo "&nbsp;";
 			$error = array('error' => $this->upload->display_errors());
+
 		}
 		else {
 			$data = array('upload_data' => $this->upload->data());
@@ -150,14 +151,18 @@ class Toko extends CI_Controller {
 
 			$base64 =  base64_encode($data); 
 
+			$namatoko = @$_POST['namatoko'];
+			$alamat = @$_POST['alamat'];
+			$lat = @$_POST['lat'];
+			$long = @$_POST['long'];
 			###########
 			$userdata  = $this->session->userdata('userdata');
 			$jwt = $userdata['token']; 
 			$parameter = array(
-				'StoreName' => "$_POST[namatoko]",
-				'StoreAddress' => "$_POST[alamat]",
-				'Latitude' => "$_POST[lat]",
-				'Longitude' => "$_POST[long]",
+				'StoreName' => "$namatoko",
+				'StoreAddress' => "$alamat",
+				'Latitude' => "$lat",
+				'Longitude' => "$long",
 				'Photo' => "$base64",
 				'AddBy' => "$userdata[id]",
 				'AddDate' => date('Y-m-d H:i:s'),
@@ -170,11 +175,13 @@ class Toko extends CI_Controller {
 				)]
 			);
 
-			$url = linkservice('store') ."api/store";
+			$url = linkservice('store') ."api/store/";
 			$method = 'POST';
 			$responseApi = ngeCurl($url, json_encode($parameter), $method , $jwt);
 			$res = json_decode($responseApi,true);
 
+			print_r($responseApi);
+			exit();
 			// print_r($res);
 			// echo json_encode($parameter);
 			// exit();

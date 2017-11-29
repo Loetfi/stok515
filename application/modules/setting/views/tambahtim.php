@@ -112,13 +112,13 @@
             <div class="row">
               <div class="col-md-4 col-md-offset-4">
                 <div class="footer">
-                  <a href="<?php echo site_url('setting/tim/addassign') ?>" class="btn btn-warning btn-fill btn-wd btn-next btn-block">BERIKUTNYA</a>  
+                  <!-- <a href="<?php echo site_url('setting/tim/addassign') ?>" class="btn btn-warning btn-fill btn-wd btn-next btn-block">BERIKUTNYA</a>   -->
+                  <button class="btn btn-warning btn-block btn-fill">BERIKUTNYA</button>
                   <div class="clearfix">
                   </div>
                 </div>
               </div>
             </div>
-            <button class="btn btn-primary">submit</button>
           </form>
         </div>
       </div>
