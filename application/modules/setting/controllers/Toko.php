@@ -7,6 +7,7 @@ class Toko extends CI_Controller {
 	{
 		parent::__construct();
 		checkLogin();
+		date_default_timezone_set("Asia/Jakarta");
 	}
 
 	public function view()
@@ -36,6 +37,11 @@ class Toko extends CI_Controller {
 		$method = 'GET';
 		$responseApi = ngeCurl($url, '', $method);
 		$res = json_decode($responseApi,true);
+
+		print_r($res);
+
+		// print_r($res);
+		// exit();
 
 		// 	"######################################################################";
 
@@ -175,13 +181,15 @@ class Toko extends CI_Controller {
 				)]
 			);
 
+			// echo json_encode($parameter);
+			// exit();
 			$url = linkservice('store') ."api/store/";
 			$method = 'POST';
 			$responseApi = ngeCurl($url, json_encode($parameter), $method , $jwt);
 			$res = json_decode($responseApi,true);
 
-			print_r($responseApi);
-			exit();
+			// print_r($responseApi);
+			// exit();
 			// print_r($res);
 			// echo json_encode($parameter);
 			// exit();
@@ -220,52 +228,8 @@ class Toko extends CI_Controller {
 		$responseApi = ngeCurl($url, '', $method , $jwt);
 		$res = json_decode($responseApi,true);
 
-		/*
-		(
-            [0] => Array
-                (
-                    [StoreAccess] => Array
-                        (
-                        )
+		$data['detailtoko'] = $res['data'][0];
 
-                    [StoreInfo] => Array
-                        (
-                            [0] => Array
-                                (
-                                    [StoreInfoId] => ae2dfe11-3508-4dd1-9752-3eadeedd53c9
-                                    [StoreId] => 19c96550-2455-4736-8f5c-dc30e3bc0e69
-                                    [StoreInfoType] => string
-                                    [StoreInfoSocialId] => string
-                                    [Email] => pevita@gmail.com
-                                    [AddBy] => 70
-                                    [AddDate] => 2017-11-26T05:29:33
-                                    [ModBy] => 
-                                    [ModDate] => 
-                                    [Deleted] => 
-                                )
-
-                        )
-
-                    [StoreId] => 19c96550-2455-4736-8f5c-dc30e3bc0e69
-                    [StoreName] => Pevocake
-                    [StoreAddress] => Bandung
-                    [Latitude] => -6.208991631564475
-                    [Longitude] => 106.9661979668308
-                    [Photo] => https://stoksisdev.blob.core.windows.net/store/5263f98c-c24e-4403-8501-8b768ff242d1
-                    [AddBy] => 70
-                    [AddDate] => 2017-11-26T05:29:33
-                    [ModBy] => 
-                    [ModDate] => 
-                    [Deleted] => 
-                )
-
-        )
-        */
-
-
-		// print_r($res);
-		// exit();
-		// http://stoksis-store-services.azurewebsites.net/api/storebyid?storeId=2222
 		$data['title'] = 'Atur Toko';
 		$template = 'setting/edittoko';
 

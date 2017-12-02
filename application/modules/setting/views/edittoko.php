@@ -1,3 +1,5 @@
+ <!-- <?php print_r($detailtoko); ?> -->
+
  <div class="content">
   <div class="container-fluid">
     <div class="row">
@@ -51,7 +53,11 @@
                       <div class="col-md-4 col-md-offset-4">
                         <div class="text-center bg-form">
                           <div class="img-section"> 
+                            <?php if (count($detailtoko['Photo'])>0) { ?>
+                            <img src="<?php echo $detailtoko['Photo'];?>" id="imagePreview" class="fp-toko-edit" alt="Profile picture"> 
+                            <?php } else { ?>
                             <img src="<?php echo base_url('assets/img/icon/icon-fptoko.svg');?>" id="imagePreview" class="fp-toko-edit" alt="Profile picture"> 
+                            <?php } ?>
                             <div class="col-lg-12"> 
                             </div>
                           </div>
@@ -65,14 +71,14 @@
                     <div class="row">
                       <div class="col-md-4 col-sm-4 col-md-offset-4 col-sm-offset-4">
                         <div class="form-group"> 
-                          <input class="form-control" value="XYZ Mega Store" type="text" name="namatoko" placeholder="Nama Toko" required="true">
+                          <input class="form-control" value="<?php echo $detailtoko['StoreName'];?>" type="text" name="namatoko" placeholder="Nama Toko" required="true">
                         </div>
                       </div>
                     </div>
                     <div class="row"> 
                       <div class="col-md-4 col-sm-4 col-md-offset-4 col-sm-offset-4">
                         <div class="input-group" style="width:100%;">
-                          <input placeholder="Alamat" type="text" class="form-control" value="Jl. Pajajaran No. 1 Bogor," required="true">
+                          <input placeholder="Alamat" type="text" class="form-control" value="<?php echo $detailtoko['StoreAddress'];?>" required="true">
                           <span class="input-group-btn"> 
                             <a href="#alamattoko" data-toggle="modal" class="icon-right" style="left: 5px;">
                               <img src="<?php echo base_url('assets/img/icon/icon-lokasi.svg');?>" style="width: 20px !important;" class="" alt="User Image">
@@ -86,6 +92,8 @@
                 <div class="tab-pane" id="tab2">
                   <h5 class="text-center">Pilih Saluran Tokomu
                   </h5> 
+
+
                   <div class="table-responsive">
                     <table class="table">
                       <tbody>
@@ -347,26 +355,26 @@
 
 <script type="text/javascript" src="http://maps.google.com/maps/api/js?libraries=places&sensor=false"></script>
 
- <script>
-var map;
-    var marker;
-    var positions = [];
-    var positionsIdx = 1;
-    function placeMarker(location) {
+<script>
+  var map;
+  var marker;
+  var positions = [];
+  var positionsIdx = 1;
+  function placeMarker(location) {
 
-      if (marker) {
+    if (marker) {
         //if marker already was created change positon
         marker.setPosition(location);
       }
       else {
-        
+
         //create a marker
         marker = new google.maps.Marker({
           position: location,
           map: map,
           draggable: true
         }
-                                       );
+        );
 
       }
     }
@@ -393,7 +401,7 @@ var map;
 
 
       //untuk search box
-var searchBox = new google.maps.places.SearchBox(document.getElementById('pac-input'));
+      var searchBox = new google.maps.places.SearchBox(document.getElementById('pac-input'));
 
 //place change box
 google.maps.event.addListener(searchBox,'places_changed',function(){
@@ -410,12 +418,12 @@ google.maps.event.addListener(searchBox,'places_changed',function(){
   map.fitBounds(bounds);
   map.setZoom(15);
 });
- 
-    }
 
-    google.maps.event.addDomListener(window, 'load', initialize);
+}
 
-   $(function() {
+google.maps.event.addDomListener(window, 'load', initialize);
+
+$(function() {
 
   $('#alamattoko').on('shown.bs.modal', function(){
     google.maps.event.trigger(map, 'resize');
@@ -423,49 +431,49 @@ google.maps.event.addListener(searchBox,'places_changed',function(){
   });
 
 });
-  </script>
+</script>
 
-  <script type="text/javascript">
-    $().ready(function(){
-      var $validator = $("#wizardForm").validate({
-        rules: {
-          email: {
-            required: true,
-            email: true,
-            minlength: 5
-          }
-          ,
-          first_name: {
-            required: false,
-            minlength: 5
-          }
-          ,
-          last_name: {
-            required: false,
-            minlength: 5
-          }
-          ,
-          website: {
-            required: true,
-            minlength: 5,
-            url: true
-          }
-          ,
-          framework: {
-            required: false,
-            minlength: 4
-          }
-          ,
-          cities: {
-            required: true
-          }
-          ,
-          price:{
-            number: true
-          }
+<script type="text/javascript">
+  $().ready(function(){
+    var $validator = $("#wizardForm").validate({
+      rules: {
+        email: {
+          required: true,
+          email: true,
+          minlength: 5
+        }
+        ,
+        first_name: {
+          required: false,
+          minlength: 5
+        }
+        ,
+        last_name: {
+          required: false,
+          minlength: 5
+        }
+        ,
+        website: {
+          required: true,
+          minlength: 5,
+          url: true
+        }
+        ,
+        framework: {
+          required: false,
+          minlength: 4
+        }
+        ,
+        cities: {
+          required: true
+        }
+        ,
+        price:{
+          number: true
         }
       }
-                                                );
+    }
+    );
       // you can also use the nav-pills-[blue | azure | green | orange | red] for a different color of wizard
       $('#wizardCard').bootstrapWizard({
         tabClass: 'nav nav-pills',
@@ -514,10 +522,10 @@ google.maps.event.addListener(searchBox,'places_changed',function(){
           }
         }
       }
-                                      );
+      );
     }
-             );
-    function onFinishWizard(){
+    );
+  function onFinishWizard(){
       //here you can do something, sent the form to server via ajax and show a success message with swal
       swal("Sukses", "Anda sukses memperbarui toko baru", "success");
     }
@@ -526,7 +534,7 @@ google.maps.event.addListener(searchBox,'places_changed',function(){
     $().ready(function(){
       $('#tambahIdentitasToko').validate();
     }
-             );
+    );
   </script>
   <script type="text/javascript">
     $('#file-upload').change(function(){
@@ -541,7 +549,7 @@ google.maps.event.addListener(searchBox,'places_changed',function(){
         reader.readAsDataURL(input.files[0]);
       }
     }
-                            );
+    );
   </script>
   <script type="text/javascript">
     $(".reveal").on('click',function() {
@@ -564,5 +572,5 @@ google.maps.event.addListener(searchBox,'places_changed',function(){
         $pwd.attr('type', 'password');
       }
     }
-                   );
+    );
   </script>
